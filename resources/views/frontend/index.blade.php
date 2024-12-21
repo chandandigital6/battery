@@ -22,7 +22,7 @@
     {{-- banner --}}
     <div class="h-96 w-full relative" id="home">
         <!-- Background Image -->
-        <img src="{{asset('image/banner')}}" alt="Banner Image" class="w-full h-full object-cover">
+        <img src="{{asset('image/green-bg.jpg')}}" alt="Banner Image" class="w-full h-full object-cover">
     
         <!-- Overlay Text -->
         <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center p-4">
@@ -30,7 +30,7 @@
                 <div class="mx-auto max-w-full px-4 py-32 lg:flex lg:h-screen lg:items-center">
                     <div class="mx-auto max-w-3xl text-center">
                         <!-- Header Title with Gradient -->
-                        <h1 class="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
+                        <h1 class="bg-gradient-to-r from-green-300 via-green-500 to-teal-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
                             Understand User Need.
                             <span class="sm:block">Increase Conversion.</span>
                         </h1>
@@ -42,11 +42,11 @@
     
                         <!-- Call to Action Buttons -->
                         <div class="mt-8 flex flex-wrap justify-center gap-4">
-                            <a href="{{route('frontend.index')}}" class="block w-full rounded border border-blue-600 bg-gradient-to-r from-blue-500 to-black  px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto" href="#">
+                            <a href="{{route('frontend.index')}}" class="block w-full rounded border border-green-600 bg-gradient-to-r from-green-500 to-black  px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto" href="#">
                                 Get Started
                             </a>
     
-                            <a href="{{route('frontend.index')}}" class="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-gradient-to-r from-blue-500 to-black  focus:outline-none focus:ring active:bg-blue-500 sm:w-auto" href="#">
+                            <a href="{{route('frontend.index')}}" class="block w-full rounded border border-green-600 px-12 py-3 text-sm font-medium text-white hover:bg-gradient-to-r from-green-500 to-black  focus:outline-none focus:ring active:bg-green-500 sm:w-auto" href="#">
                                 Learn More
                             </a>
                         </div>
@@ -57,9 +57,9 @@
     </div>
     
 {{-- ABOUT US:::::::: --}}
-<section id="about" class="py-16 bg-gradient-to-r from-blue-300 to-black-500">
+<section id="about" class="py-16 bg-gradient-to-r from-green-300 to-black-500">
     <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-extrabold text-blue-900 sm:text-5xl">
+        <h2 class="text-4xl font-extrabold text-green-900 sm:text-5xl">
             About Us
         </h2>
         <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
@@ -68,7 +68,7 @@
 
         <div class="mt-12 grid gap-12 lg:grid-cols-3 md:grid-cols-2">
             <!-- Card 1 -->
-            <div class="p-6 bg-gradient-to-r from-blue-500 to-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="p-6 bg-gradient-to-r from-green-500 to-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div class="flex justify-center"><img src="{{asset('image/QUALITY.png')}}" alt="" class="h-24 w-24"></div>
                 <h3 class="text-2xl font-semibold text-white">Quality Products</h3>
                 <p class="mt-4 text-gray-100">
@@ -77,7 +77,7 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="p-6 p-6 bg-gradient-to-r from-blue-500 to-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="p-6 p-6 bg-gradient-to-r from-green-500 to-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div class="flex justify-center"><img src="{{asset('image/SUSTAINBILITY.png')}}" alt="" class="h-24 w-24"></div>
                 <h3 class="text-2xl font-semibold text-white">Sustainability</h3>
                 <p class="mt-4 text-gray-100">
@@ -86,7 +86,7 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="p-6 p-6 bg-gradient-to-r from-blue-500 to-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="p-6 p-6 bg-gradient-to-r from-green-500 to-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div class="flex justify-center"><img src="{{asset('image/InnovatioN.png')}}" alt="" class="h-24 w-24"></div>
                 <h3 class="text-2xl font-semibold text-white">Innovation</h3>
                 <p class="mt-4 text-gray-100">
@@ -99,10 +99,10 @@
 </section>
 
    {{-- Explore Products --}}
-   <div id="product" class="bg-gradient-to-r from-blue-300 to-black-500 py-10">
+   <div id="product" class="bg-gradient-to-r from-green-300 to-black-500 py-10">
     <!-- Section Heading -->
     <div class="font-bold flex justify-center mb-8">
-      <h1 class="text-4xl text-blue-900">Explore Battery</h1>
+      <h1 class="text-4xl text-green-900">Explore Battery</h1>
     </div>
     
     <!-- Cards Grid -->
@@ -119,7 +119,7 @@
           <p class="text-gray-600 mt-2">
             Efficient and reliable lead-acid batteries designed for e-rickshaws.
           </p>
-          <button class="mt-4 px-4 py-2 bg-gradient-to-r from-blue-500 to-black text-white rounded hover:from-blue-700 hover:to-black">
+          <button class="mt-4 px-4 py-2 bg-gradient-to-r from-green-500 to-black text-white rounded hover:from-green-700 hover:to-black">
            <a href="{{route('frontend.detail')}}"> View Details</a>
           </button>
         </div>
@@ -137,7 +137,7 @@
           <p class="text-gray-600 mt-2">
             High-capacity lead-acid batteries for industrial applications.
           </p>
-          <button class="mt-4 px-4 py-2 bg-gradient-to-r from-blue-500 to-black text-white rounded hover:from-blue-700 hover:to-black">
+          <button class="mt-4 px-4 py-2 bg-gradient-to-r from-green-500 to-black text-white rounded hover:from-green-700 hover:to-black">
             <a href="{{route('frontend.detail')}}">View Details</a>
           </button>
         </div>
@@ -155,7 +155,7 @@
           <p class="text-gray-600 mt-2">
             Advanced lithium-ion batteries for efficient energy storage solutions.
           </p>
-          <button class="mt-4 px-4 py-2 bg-gradient-to-r from-blue-500 to-black text-white rounded hover:from-blue-700 hover:to-black">
+          <button class="mt-4 px-4 py-2 bg-gradient-to-r from-green-500 to-black text-white rounded hover:from-green-700 hover:to-black">
            <a href="{{route('frontend.detail')}}"> View Details</a>
           </button>
         </div>
@@ -165,7 +165,7 @@
   
     {{-- Battery --}}
 {{-- 
-<div class="flex items-center justify-center bg-gradient-to-l from-blue-400 to-black p-6 rounded-lg shadow-md space-x-4">
+<div class="flex items-center justify-center bg-gradient-to-l from-green-400 to-black p-6 rounded-lg shadow-md space-x-4">
    <div class="flex justify-center gap-2">
      <!-- E-Scooter Section -->
      <article class="p-4 bg-white rounded-lg shadow-sm flex flex-col items-center text-center space-y-2 hover:shadow-lg transition-shadow">
@@ -210,7 +210,7 @@
             </p>
             <div class="flex flex-row items-center space-x-3 mt-5 ml-12">
               <!-- Social Buttons -->
-              <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-2xl font-bold text-lg bg-blue-600 hover:drop-shadow-lg cursor-pointer transition ease-in duration-300">
+              <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-2xl font-bold text-lg bg-green-600 hover:drop-shadow-lg cursor-pointer transition ease-in duration-300">
                 <svg class="w-4 fill-gray-100" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8.072 9.301s1.892-.147 1.892-2.459c0-2.315-1.548-3.441-3.51-3.441H0v12.926h6.454s3.941.129 3.941-3.816c-.001-.001.171-3.21-2.323-3.21zM2.844 5.697h3.61s.878 0 .878 1.344c0 1.346-.516 1.541-1.102 1.541H2.844V5.697zm3.427 8.332H2.844v-3.455h3.61s1.308-.018 1.308 1.775c0 1.512-.977 1.669-1.491 1.68zm9.378-7.341c-4.771 0-4.767 4.967-4.767 4.967s-.326 4.941 4.767 4.941c0 0 4.243.254 4.243-3.437H17.71s.072 1.391-1.988 1.391c0 0-2.184.152-2.184-2.25h6.423c.001-.001.709-5.612-4.312-5.612zm1.941 3.886h-4.074s.266-1.992 2.182-1.992 1.892 1.992 1.892 1.992zm.507-6.414H12.98v1.594h5.117V4.16z"/>
                 </svg>
@@ -224,7 +224,7 @@
           </div>
       
           <!-- Right Section -->
-          <div class="mx-0 max-w-xl my-6 flex rounded-2xl bg-gradient-to-r from-blue-500 to-black">
+          <div class="mx-0 max-w-xl my-6 flex rounded-2xl bg-gradient-to-r from-green-500 to-black">
             <div class="swiper-container flex-col flex self-center">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -255,7 +255,7 @@
 
  
 
-<section class="bg-gradient-to-r from-blue-300 to-black-500 py-16">
+<section class="bg-gradient-to-r from-green-300 to-black-500 py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="text-center">
         <h2 class="text-3xl font-semibold text-gray-900">Our Vision & Mission</h2>
@@ -265,7 +265,7 @@
       <!-- Vision Section -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 md:mx-32">
         <div class="text-center md:text-left">
-          <h3 class="text-2xl font-semibold text-blue-600">Vision</h3>
+          <h3 class="text-2xl font-semibold text-green-600">Vision</h3>
           <p class="mt-4 text-lg text-gray-700">
             To empower a sustainable future by leading the development and adoption of cutting-edge e-battery technology. Our vision is to create a world where clean, reliable, and efficient energy solutions are universally accessible, driving a global transition toward renewable energy and a greener tomorrow.
           </p>
@@ -279,7 +279,7 @@
   
         <!-- Mission Section -->
         <div class="text-center md:text-left">
-          <h3 class="text-2xl font-semibold text-blue-600">Mission</h3>
+          <h3 class="text-2xl font-semibold text-green-600">Mission</h3>
           <p class="mt-4 text-lg text-gray-700">
             At [Company Name], our mission is to provide innovative and high-performance e-battery solutions that support the growth of electric vehicles, renewable energy storage, and green technologies. We are dedicated to:
           </p>
@@ -295,7 +295,7 @@
   </section>
   
 
-  <section id="contact" class="bg-gradient-to-r from-blue-800 to-black py-16">
+  <section id="contact" class="bg-gradient-to-r from-green-800 to-black py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 text-white">
       <div class="text-center">
         <h2 class="text-3xl font-semibold">Get in Touch</h2>
@@ -312,25 +312,25 @@
               <!-- Name Field -->
               <div>
                 <label for="name" class="block text-sm font-medium">Full Name</label>
-                <input type="text" id="name" name="name" required class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <input type="text" id="name" name="name" required class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-green-500" />
               </div>
   
               <!-- Email Field -->
               <div>
                 <label for="email" class="block text-sm font-medium">Email Address</label>
-                <input type="email" id="email" name="email" required class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <input type="email" id="email" name="email" required class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-green-500" />
               </div>
             </div>
   
             <!-- Message Field -->
             <div>
               <label for="message" class="block text-sm font-medium">Message</label>
-              <textarea id="message" name="message" rows="4" required class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+              <textarea id="message" name="message" rows="4" required class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
             </div>
   
             <!-- Submit Button -->
             <div>
-              <button type="submit" class="w-full bg-gradient-to-r from-blue-300 to-blue-800  hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <button type="submit" class="w-full bg-gradient-to-r from-green-300 to-green-800  hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
                 Send Message
               </button>
             </div>
