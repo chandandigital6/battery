@@ -26,15 +26,8 @@ use App\Http\Controllers\JobController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/about', [HomeController::class, 'about'])->name('about');
-Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
-Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::get('/course', [HomeController::class, 'course'])->name('course');
-Route::get('/blogDetails/{blog}', [HomeController::class, 'single'])->name('blogDetails-blog');
-Route::get('/search', [HomeController::class, 'search'])->name('searchBlogs');
-Route::get('/career', [HomeController::class, 'career'])->name('career');
-Route::get('/jobdetail', [HomeController::class, 'jobdetail'])->name('jobdetail');
+Route::get('/', [HomeController::class, 'index'])->name('frontend.index');
+Route::get('/detail', [HomeController::class, 'detail'])->name('frontend.detail');
 Route::get('/thankyou', [HomeController::class, 'thankyou'])->name('thankyou');
 
 //Route::get('',[HomeController::class,'blogDetails'])->name('blog-details');

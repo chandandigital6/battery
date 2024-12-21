@@ -1,138 +1,88 @@
-<!-- Topbar Start -->
-<div class="container-fluid d-none d-lg-block">
-    <div class="row align-items-center py-4 px-xl-5">
-        <div class="col-lg-3">
-            <a href="" class="text-decoration-none">
-                <img src="{{ asset('asset/img/RVG LOGO..png') }}" alt="" width="250">
-                {{--                <h1 class="m-0"><span class="text-primary">Real </span>Victory</h1> --}}
-            </a>
-        </div>
-        <div class="col-lg-3 text-right">
-            <div class="d-inline-flex align-items-center">
-                <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
-                <div class="text-left">
-                    <h6 class="font-weight-semi-bold mb-1">Our Office</h6>
-                    <small>
-                        73 Basement, Ekta Enclave Society, Lakhanpur, Khyora, Kanpur, Uttar Pradesh 208024
-                    </small>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 text-right">
-            <div class="d-inline-flex align-items-center">
-                <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
-                <div class="text-left">
-                    <h6 class="font-weight-semi-bold mb-1">Email Us</h6>
-                    <small>realvictorygroups@gmail.com</small>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 text-right">
-            <div class="d-inline-flex align-items-center">
-                <i class="fa fa-2x fa-phone text-primary mr-3"></i>
-                <div class="text-left">
-                    <h6 class="font-weight-semi-bold mb-1">Call Us</h6>
-                    <small><a href="tel: +917753800444"> +917753800444</a></small> <br>
-                    <small><a href="tel: +918423269465"> +918423269465</a></small>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Topbar End -->
+<nav class="bg-gradient-to-l from-blue-500 to-black w-full z-30">
+  <div class="container mx-auto flex items-center justify-between px-4 py-4 md:px-24">
+      <!-- Logo Section -->
+      <div class="flex items-center">
+          <a href="/" class="hover:opacity-90 transition-opacity duration-300">
+              <a href="{{route('frontend.index')}}" class="text-white font-semibold text-xl">
+                  Σ-BΛƬƬΣЯY
+              </a>
+          </a>
+      </div>
 
-<!-- Navbar Start -->
-<div class="container-fluid">
-    <div class="row border-top px-xl-5">
-        <div class="col-lg-3 d-none d-lg-block">
-            <!-- Add any additional content here if needed -->
-        </div>
-        <div class="col-lg-9">
-            <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-                <a href="" class="text-decoration-none d-block d-lg-none">
-                    <img src="{{ asset('asset/img/RVG LOGO..png') }}" alt="" width="250">
-                    {{--                    <h1 class="m-0"><span class="text-primary">Real</span>Victory</h1> --}}
-                </a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav py-0">
-                        <a href="{{ route('home') }}"
-                            class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}">Home</a>
-                        <a href="{{ route('about') }}"
-                            class="nav-item nav-link {{ Request::is('about') ? 'active' : '' }}">About</a>
-                        <a href="{{ route('course') }}"
-                            class="nav-item nav-link {{ Request::is('course') ? 'active' : '' }}">Courses</a>
-                        <a href="{{ route('teacher') }}"
-                            class="nav-item nav-link {{ Request::is('teacher') ? 'active' : '' }}">Trainers</a>
-                        <a href="{{ route('blog') }}"
-                            class="nav-item nav-link {{ Request::is('blog') ? 'active' : '' }}">Blog </a>
+      <!-- Mobile Toggle Button -->
+      <button
+          id="mobile-menu-button"
+          class="md:hidden text-gray-50 hover:text-blue-50 transition-colors duration-300 focus:outline-none z-20"
+          onclick="toggleMenu()"
+      >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+      </button>
 
-                        {{--                        <div class="nav-item dropdown"> --}}
-                        {{--                            <a href="#" class="nav-link dropdown-toggle {{ Request::is('blog*') ? 'active' : '' }}" data-toggle="dropdown">Blog</a> --}}
-                        {{--                            <div class="dropdown-menu rounded-0 m-0"> --}}
-                        {{--                            </div> --}}
-                        {{--                        </div> --}}
-                        <a href="{{ route('career') }}" class="nav-item nav-link">Careers</a>
-                        <a href="{{ route('contact') }}"
-                            class="nav-item nav-link {{ Request::is('contact') ? 'active' : '' }}">Contact</a>
-                    </div>
-                    <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="#" data-toggle="modal"
-                        data-target="#enrollModal">Enroll Now</a>
-                </div>
-            </nav>
+      <!-- Navigation Links -->
+      <div
+          id="mobile-menu"
+          class="invisible md:visible fixed inset-0 bg-blue-400 md:static md:bg-transparent z-40"
+      >
+          <div class="flex flex-col h-full">
+              <!-- Mobile Close Button -->
+              <button 
+                  id="mobile-menu-close"
+                  class="md:hidden absolute top-4 right-4 text-gray-50 hover:text-blue-50 z-50"
+                  onclick="toggleMenu()"
+              >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+              </button>
 
-        </div>
-    </div>
-</div>
-<!-- Navbar End -->
+              <ul class="flex flex-col md:flex-row items-center justify-center md:justify-start space-y-6 md:space-y-0 md:space-x-8 p-6 md:p-0 h-full">
+                  <li class="w-full md:w-auto text-center md:text-left">
+                      <a href="{{route('frontend.index')}}" class="block py-2 text-lg md:text-md hover:text-blue-500 transition-colors duration-300 font-light text-white">Home</a>
+                  </li>
+                  <li class="w-full md:w-auto text-center md:text-left">
+                      <a href="#about" class="block py-2 text-md md:text-md hover:text-blue-500 transition-colors duration-300 font-light text-white">About</a>
+                  </li>
+                  
+                  <li class="w-full md:w-auto text-center md:text-left relative group">
+                      <button class="w-full py-2 text-md md:text-md hover:text-blue-500 transition-colors duration-300 focus:outline-none font-light text-white">
+                          <a href="#product">Products</a>
+                      </button>
+                      <!-- Mobile Dropdown -->
+                      <div class="md:absolute md:left-0 md:hidden md:group-hover:block md:w-48 md:bg-blue-300 md:rounded-md md:shadow-lg">
+                          <ul class="md:py-2 space-y-4 md:space-y-0">
+                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-blue-500 font-light text-white">Lead-Battery</a></li>
+                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-blue-500 font-light text-white">Lead-acid Battery</a></li>
+                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-blue-500 font-light text-white">Lead-acid Battery</a></li>
+                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-blue-500 font-light text-white">More</a></li>
+                          </ul>
+                      </div>
+                  </li>
+                 
+                  <li class="w-full md:w-auto text-center md:text-left">
+                      <a href="#service" class="block py-2 text-md md:text-md hover:text-blue-500 transition-colors duration-300 font-light text-white">Service</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</nav>
 
-<!-- Enroll Now Modal Start -->
-<div class="modal fade" id="enrollModal" tabindex="-1" role="dialog" aria-labelledby="enrollModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content border-0 rounded-lg shadow-lg">
-            <div class="modal-header border-bottom-0">
-                <h5 class="modal-title" id="enrollModalLabel">Enroll Now</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form action="{{ route('appointment.store') }}" method="post">
-                    @csrf
-                    <div class="form-group">
-                        <label for="name" class="font-weight-bold">Full Name</label>
-                        <input type="text" class="form-control rounded-pill border-primary" name="name"
-                            id="name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="font-weight-bold">Email Address</label>
-                        <input type="email" class="form-control rounded-pill border-primary" name="email"
-                            id="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone" class="font-weight-bold">Phone Number</label>
-                        <input type="tel" class="form-control rounded-pill border-primary" name="number"
-                            id="phone" placeholder="Enter your phone number" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="course" class="font-weight-bold">Select Course</label>
-                        <select class="form-control rounded-pill border-primary" name="course" id="course"
-                            required>
-                            <option value="" disabled selected>Select Course</option>
-                            <option value="php">PHP</option>
-                            <option value="web designing">WEB DESIGNING</option>
-                            <option value="full stack">FULL STACK</option>
-                            <option value="digital marketing"> Digital Marketing</option>
-                            <option value="graphics Designing"> Graphics Designing</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary rounded-pill btn-block py-2">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Enroll Now Modal End -->
+<script>
+function toggleMenu() {
+  console.log("Toggle function called");
+  const menu = document.getElementById('mobile-menu');
+  console.log("Menu element:", menu);
+  if (menu.classList.contains('invisible')) {
+      menu.classList.remove('invisible');
+      menu.classList.add('visible');
+  } else {
+      menu.classList.remove('visible');
+      menu.classList.add('invisible');
+  }
+}
+
+// Make sure the function exists in global scope
+window.toggleMenu = toggleMenu;
+</script>
