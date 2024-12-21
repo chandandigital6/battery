@@ -30,7 +30,7 @@ return new class extends Migration
             $table->string('twitter_data2')->nullable();
             $table->string('title')->nullable();
             $table->text('schema_js')->nullable();
-            $table->foreignId('course_id')->nullable()->constrained('courses')->onDelete('cascade');
+            // $table->foreignId('course_id')->nullable()->constrained('courses')->onDelete('cascade');
             $table->timestamps();
         });
     }
