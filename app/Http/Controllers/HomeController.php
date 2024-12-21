@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
-
+use App\Models\Banner;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('Frontend.index');
+        $banners=Banner::all();
+        $abouts=About::all();
+        // dd($abouts);
+        return view('Frontend.index',compact('banners','abouts'));
     }
 
     public function detail()

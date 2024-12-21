@@ -5,16 +5,13 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\BannerController;
 
-use App\Http\Controllers\CourseController;
-use App\Http\Controllers\PlanCOntroller;
+
 use App\Http\Controllers\SeoController;
-use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\JobController;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,12 +82,6 @@ Route::group(['middleware' => ['auth']],function (){
 
 
     //services
-
-
-
-
-
-
 
     //testimonial
 
