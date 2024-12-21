@@ -1,4 +1,4 @@
-@extends('Components.main')
+@extends('components.main')
 @section('comtent')
 <div class="bg-gray-100">
     <div class="container mx-auto px-4 py-8">
@@ -22,7 +22,7 @@
                           onclick="changeImage(this.src)">
           </div>
         </div>
-  
+
         <!-- Product Details -->
         <div class="w-full md:w-1/2 px-4">
           <h2 class="text-3xl font-bold mb-2">Premium Electric Battery</h2>
@@ -64,10 +64,10 @@
             </svg>
             <span class="ml-2 text-gray-600">4.5 (120 reviews)</span>
           </div>
-          <p class="text-gray-700 mb-6">Experience premium  quality and industry-leading premium 
+          <p class="text-gray-700 mb-6">Experience premium  quality and industry-leading premium
             with
             these premium. Perfect for need for conveince and frequent travelers.</p>
-  
+
           <div class="mb-6">
             <h3 class="text-lg font-semibold mb-2">Color:</h3>
             <div class="flex space-x-2">
@@ -79,13 +79,13 @@
                               class="w-8 h-8 bg-green-600 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"></button>
             </div>
           </div>
-  
+
           <div class="mb-6">
             <label for="quantity" class="block text-sm font-medium text-gray-700 mb-1">Quantity:</label>
             <input type="number" id="quantity" name="quantity" min="1" value="1"
                           class="w-12 text-center rounded-md border-gray-300  shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
           </div>
-  
+
           {{-- <div class="flex space-x-4 mb-6">
             <button
                           class="bg-indigo-600 flex gap-2 items-center text-white px-6 py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
@@ -106,7 +106,7 @@
                           Wishlist
                       </button>
           </div> --}}
-  
+
           <div>
             <h3 class="text-lg font-semibold mb-2">Key Features:</h3>
             <ul class="list-disc list-inside text-gray-700">
@@ -128,11 +128,11 @@
                        <a href="#">   Contact us</a>
                       </button>
           </div>
-          
+
         </div>
       </div>
     </div>
-  
+
     <script>
       function changeImage(src) {
               document.getElementById('mainImage').src = src;

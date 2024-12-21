@@ -1,4 +1,4 @@
-@extends('Components.main')
+@extends('components.main')
 @section('comtent')
 
 <style>
