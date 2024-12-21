@@ -20,11 +20,11 @@
 
 </head>
 <body>
-    @include('Components.header')
+    @include('components.header')
 
     @yield('comtent')
 
-    @include('Components.footer')
+    @include('components.footer')
     <script
   crossorigin="anonymous"
   defer
