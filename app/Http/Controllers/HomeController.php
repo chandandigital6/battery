@@ -13,12 +13,12 @@ class HomeController extends Controller
         $banners=Banner::all();
         $abouts=About::all();
         // dd($abouts);
-        return view('Frontend.index',compact('banners','abouts'));
+        return view('frontend.index',compact('banners','abouts'));
     }
 
     public function detail()
     {
-        return view('Frontend.detail');
+        return view('frontend.detail');
     }
 
 }
