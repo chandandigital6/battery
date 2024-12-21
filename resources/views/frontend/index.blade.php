@@ -195,7 +195,7 @@
 <!-- component -->
 
 
-<div id="service" class="bg-no-repeat bg-cover bg-center relative h-110" style="background-image: url(https://img.freepik.com/premium-vector/gradient-battery-background_23-2151863674.jpg?semt=ais_hybrid);">
+<div id="service" class="bg-no-repeat bg-cover bg-center relative h-110" style="background-image: url(https://img.freepik.com/free-vector/abstract-technology-green-background_1035-17926.jpg?t=st=1734766741~exp=1734770341~hmac=ff400f31770abc2bbfdbd2bd01d03c0e82c0b16642aa9c71075023e61f26b3d7&w=996);">
  <div class="absolute bg-gradient-to-r from-gray-900 to-gray-900 opacity-75 inset-0 z-0"></div>
 <div>
     <div class="min-h-100 flex justify-center md:mx-32">
