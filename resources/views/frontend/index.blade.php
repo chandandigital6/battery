@@ -108,52 +108,19 @@
     </div>
 </section>
 
-<section id="about" class="py-6 bg-gradient-to-r from-green-300 to-black-500">
+<section id="about" class="py-12  bg-gradient-to-r from-green-300 to-black-500">
   <div class="container mx-auto px-6 text-center">
       @foreach ($abouts->take(1) as $about)
-
-
-      <h2 class="text-4xl font-extrabold text-green-900 sm:text-5xl">
-       {{ $about->title }}
-      </h2>
-      <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
-{!! $about->description !!}
-      </p>
+          <h2 class="text-4xl font-extrabold text-green-900 sm:text-5xl">
+              {{ $about->title }}
+          </h2>
+          <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
+              {!! $about->description !!}
+          </p>
       @endforeach
-      <div class="mt-12 grid gap-12 lg:grid-cols-3 md:grid-cols-2">
-          <!-- Card 1 -->
-          @foreach ($abouts->skip(1)->take(3) as $ab)
-
-
-          <div class="p-6 bg-gradient-to-r from-green-500 to-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              {{-- <div class="flex justify-center"><img src="{{asset('storage/'.$ab->image)}}" alt="" class="h-24 w-24"></div> --}}
-              <h3 class="text-2xl font-semibold text-white">{{ $ab->title }}</h3>
-              <p class="mt-4 text-gray-100">
-     {!! $ab->description !!}
-              </p>
-          </div>
-          @endforeach
-          <!-- Card 2 -->
-          {{-- <div class="p-6 p-6 bg-gradient-to-r from-green-500 to-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div class="flex justify-center"><img src="{{asset('image/SUSTAINBILITY.png')}}" alt="" class="h-24 w-24"></div>
-              <h3 class="text-2xl font-semibold text-white">Sustainability</h3>
-              <p class="mt-4 text-gray-100">
-                  Our commitment to the environment is reflected in the way we manufacture and recycle batteries. We aim to create eco-friendly products that contribute to a greener planet.
-              </p>
-          </div> --}}
-
-          <!-- Card 3 -->
-          {{-- <div class="p-6 p-6 bg-gradient-to-r from-green-500 to-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div class="flex justify-center"><img src="{{asset('image/InnovatioN.png')}}" alt="" class="h-24 w-24"></div>
-              <h3 class="text-2xl font-semibold text-white">Innovation</h3>
-              <p class="mt-4 text-gray-100">
-                  Constant innovation drives us forward. We invest in research and development to bring you the latest in battery technology, ensuring you have access to cutting-edge solutions.
-              </p>
-          </div> --}}
-      </div>
-
   </div>
 </section>
+
 
 
    {{-- Explore Products --}}

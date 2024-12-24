@@ -4,7 +4,8 @@
       <div class="flex items-center">
           <a href="/" class="hover:opacity-90 transition-opacity duration-300">
               <a href="{{route('frontend.index')}}" class="text-white font-semibold text-xl">
-                  Σ-BΛƬƬΣЯY
+                  {{-- Σ-BΛƬƬΣЯY --}}
+                  <img src="{{asset('asset/img/LITHO_POWER.png')}}" alt="" class="w-20 h-20">
               </a>
           </a>
       </div>

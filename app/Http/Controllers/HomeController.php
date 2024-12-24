@@ -28,4 +28,8 @@ class HomeController extends Controller
         return view('frontend.detail',compact('product'));
     }
 
+    public function thankyou(){
+        return view('Frontend.thankyou');
+    }
+
 }

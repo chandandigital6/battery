@@ -4,7 +4,8 @@
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div>
             <a href="#" class="text-black font-semibold text-xl">
-                Σ-BΛƬƬΣЯY
+                {{-- Σ-BΛƬƬΣЯY --}}
+                <img src="{{asset('asset/img/LITHO_POWER.png')}}" alt="" class="w-20 h-20">
             </a>
         {{-- <img src="#" class="mr-5 h-6 sm:h-9" alt="logo" /> --}}
           <p class="max-w-xs mt-4 text-sm text-gray-600">
