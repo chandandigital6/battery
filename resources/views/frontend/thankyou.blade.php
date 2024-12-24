@@ -1,4 +1,4 @@
-@extends('Components.main')
+@extends('components.main')
 @section('content')
 <div class="min-h-screen flex items-center justify-center bg-gradient-to-r from-green-500 to-black-500">
     <div class="text-center text-white p-10 rounded-lg shadow-lg bg-opacity-15 bg-gray-800">
