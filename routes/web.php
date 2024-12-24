@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MissionVisionController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,7 @@ use App\Http\Controllers\MissionVisionController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('frontend.index');
-Route::get('/detail', [HomeController::class, 'detail'])->name('frontend.detail');
+Route::get('/detail/{product}', [HomeController::class, 'detail'])->name('frontend.detail');
 Route::get('/thankyou', [HomeController::class, 'thankyou'])->name('thankyou');
 
 //Route::get('',[HomeController::class,'blogDetails'])->name('blog-details');
@@ -96,7 +97,18 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('appointment/duplicate/{appointment}', [AppointmentController::class, 'duplicate'])->name('appointment.duplicate');
 
 
-    //services
+
+//product
+Route::get('product/index', [ProductController::class, 'index'])->name('product.index');
+Route::get('product/create', [ProductController::class, 'create'])->name('product.create');
+Route::post('product/store', [ProductController::class, 'store'])->name('product.store');
+Route::get('product/edit/{product}', [ProductController::class, 'edit'])->name('product.edit');
+Route::post('product/update/{product}', [ProductController::class, 'update'])->name('product.update');
+Route::get('product/delete/{product}', [ProductController::class, 'delete'])->name('product.delete');
+Route::get('product/duplicate/{product}', [ProductController::class, 'duplicate'])->name('product.duplicate');
+
+
+
 
     //testimonial
 

@@ -118,25 +118,31 @@
     <!-- Cards Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 md:px-16">
       <!-- Card 1 -->
+
+      @forelse ($products as $product)
       <article class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
         <img
-          src="{{ asset('image/e-rickshaw-battery.png') }}"
+          src="{{ asset('storage/'.$product->image) }}"
           alt="E-rickshaw lead-acid battery"
           class="w-full h-48 object-cover"
         />
         <div class="p-6">
-          <h1 class="text-xl font-bold text-gray-800">E-rickshaw Lead-acid Battery</h1>
+          <h1 class="text-xl font-bold text-gray-800">{{ $product->title }}</h1>
           <p class="text-gray-600 mt-2">
-            Efficient and reliable lead-acid batteries designed for e-rickshaws.
+           {{$product->sub_title}}
           </p>
           <button class="mt-4 px-4 py-2 bg-gradient-to-r from-green-500 to-black text-white rounded hover:from-green-700 hover:to-black">
-           <a href="{{route('frontend.detail')}}"> View Details</a>
+           <a href="{{route('frontend.detail',$product->id)}}"> View Details</a>
           </button>
         </div>
       </article>
+      @empty
+        <p>no data found</p>
+      @endforelse
+
 
       <!-- Card 2 -->
-      <article class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+      {{-- <article class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
         <img
           src="{{ asset('image/e-rickshaw-battery.png') }}"
           alt="Lead-acid battery for industrial use"
@@ -151,10 +157,10 @@
             <a href="{{route('frontend.detail')}}">View Details</a>
           </button>
         </div>
-      </article>
+      </article> --}}
 
       <!-- Card 3 -->
-      <article class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+      {{-- <article class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
         <img
           src="{{ asset('image/litium.png') }}"
           alt="Lithium-ion battery for advanced applications"
@@ -169,7 +175,7 @@
            <a href="{{route('frontend.detail')}}"> View Details</a>
           </button>
         </div>
-      </article>
+      </article> --}}
     </div>
   </div>
 
