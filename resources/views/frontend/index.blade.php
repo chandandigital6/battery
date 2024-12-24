@@ -104,22 +104,22 @@
                 </p>
             </div> --}}
         </div>
-
+        @foreach ($abouts->skip(4)->take(1) as $about)
+        {{-- <h2 class="text-4xl font-extrabold text-green-900 sm:text-5xl">
+            {{ $about->title }}
+        </h2> --}}
+        <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
+            {!! $about->description !!}
+        </p>
+    @endforeach
     </div>
 </section>
-
+{{-- 
 <section id="about" class="py-12  bg-gradient-to-r from-green-300 to-black-500">
   <div class="container mx-auto px-6 text-center">
-      @foreach ($abouts->skip(4)->take(1) as $about)
-          {{-- <h2 class="text-4xl font-extrabold text-green-900 sm:text-5xl">
-              {{ $about->title }}
-          </h2> --}}
-          <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
-              {!! $about->description !!}
-          </p>
-      @endforeach
+
   </div>
-</section>
+</section> --}}
 
 
 
