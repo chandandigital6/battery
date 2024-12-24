@@ -237,19 +237,23 @@
           <div class="mx-0 max-w-xl my-6 flex rounded-2xl bg-gradient-to-r from-green-500 to-black">
             <div class="swiper-container flex-col flex self-center">
               <div class="swiper-wrapper">
+                @foreach ($testimonials as $testimonial)
+
+
                 <div class="swiper-slide">
                   <blockquote class="text-left">
                     <div class="relative">
-                      <img src="{{asset('image/e-rickshaw-battery.png')}}" alt="aji" class="object-cover w-full h-60 mx-auto rounded-t-2xl"/>
+                      <img src="{{asset('storage/'.$testimonial->image)}}" alt="aji" class="object-cover w-full h-60 mx-auto rounded-t-2xl"/>
                       <div class="rounded-t-2xl absolute bg-gradient-to-t from-gray-800 opacity-75 inset-0 z-0"></div>
                     </div>
                     <div class="relative m-5 p-5">
                       <p class="text-gray-100 text-xl px-5">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni assumenda officiis sit amet itaque eveniet accusantium corporis tempora.
+                       {{ $testimonial->msg }}
                       </p>
                     </div>
                   </blockquote>
                 </div>
+                @endforeach
               </div>
             </div>
           </div>

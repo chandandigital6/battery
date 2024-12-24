@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Banner;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +14,8 @@ class HomeController extends Controller
         $banners=Banner::all();
         $abouts=About::all();
         // dd($abouts);
-        return view('frontend.index',compact('banners','abouts'));
+        $testimonials=Testimonial::all();
+        return view('frontend.index',compact('banners','abouts','testimonials'));
     }
 
     public function detail()
