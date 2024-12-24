@@ -270,42 +270,42 @@
 
 
 <section class="bg-gradient-to-r from-green-300 to-black-500 py-16">
+    @foreach ($missionViosions as $mv)
+
+
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="text-center">
-        <h2 class="text-3xl font-semibold text-gray-900">Our Vision & Mission</h2>
-        <p class="mt-4 text-lg text-gray-600">Leading the future of energy with sustainable and innovative e-battery solutions.</p>
+        <h2 class="text-3xl font-semibold text-gray-900">{{ $mv->title }}</h2>
+        <p class="mt-4 text-lg text-gray-600">{{ $mv->sub_title }}</p>
       </div>
 
       <!-- Vision Section -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 md:mx-32">
         <div class="text-center md:text-left">
-          <h3 class="text-2xl font-semibold text-green-600">Vision</h3>
+          <h3 class="text-2xl font-semibold text-green-600">{{ $mv->vision }}</h3>
           <p class="mt-4 text-lg text-gray-700">
-            To empower a sustainable future by leading the development and adoption of cutting-edge e-battery technology. Our vision is to create a world where clean, reliable, and efficient energy solutions are universally accessible, driving a global transition toward renewable energy and a greener tomorrow.
+           {!! $mv->vision_description !!}
           </p>
-          <ul class="mt-4 list-disc pl-6 text-gray-700 space-y-2">
-            <li><strong>Innovation</strong>: Continuously pushing the boundaries of e-battery technology to enhance energy efficiency, longevity, and overall performance.</li>
-            <li><strong>Sustainability</strong>: Ensuring our products and processes minimize environmental impact, promoting a cleaner, more sustainable planet.</li>
-            <li><strong>Quality</strong>: Delivering reliable, durable, and safe e-batteries that meet the highest standards of excellence for our customers.</li>
-            <li><strong>Customer Commitment</strong>: Offering personalized, efficient solutions that cater to both consumer and industrial needs, with exceptional customer service at every step.</li>
-          </ul>
+
         </div>
 
         <!-- Mission Section -->
         <div class="text-center md:text-left">
-          <h3 class="text-2xl font-semibold text-green-600">Mission</h3>
+          <h3 class="text-2xl font-semibold text-green-600">{{ $mv->mission }}</h3>
           <p class="mt-4 text-lg text-gray-700">
-            At [Company Name], our mission is to provide innovative and high-performance e-battery solutions that support the growth of electric vehicles, renewable energy storage, and green technologies. We are dedicated to:
-          </p>
-          <ul class="mt-4 list-disc pl-6 text-gray-700 space-y-2">
+      {!! $mv->mission_description !!}
+        </p>
+          {{-- <ul class="mt-4 list-disc pl-6 text-gray-700 space-y-2">
             <li><strong>Innovation</strong>: Continuously pushing the boundaries of e-battery technology to enhance energy efficiency, longevity, and overall performance.</li>
             <li><strong>Sustainability</strong>: Ensuring our products and processes minimize environmental impact, promoting a cleaner, more sustainable planet.</li>
             <li><strong>Quality</strong>: Delivering reliable, durable, and safe e-batteries that meet the highest standards of excellence for our customers.</li>
             <li><strong>Customer Commitment</strong>: Offering personalized, efficient solutions that cater to both consumer and industrial needs, with exceptional customer service at every step.</li>
-          </ul>
+          </ul> --}}
         </div>
       </div>
     </div>
+
+    @endforeach
   </section>
 
 
