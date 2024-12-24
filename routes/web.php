@@ -156,3 +156,13 @@ Route::get('product/duplicate/{product}', [ProductController::class, 'duplicate'
     Route::get('seo/delete/{seo}', [SeoController::class, 'delete'])->name('seo.delete');
     Route::get('seo/duplicate/{seo}', [SeoController::class, 'duplicate'])->name('seo.duplicate');
 });
+
+
+Route::get('/foo', function () {
+    $exitCode = Artisan::call('storage:link');
+    if ($exitCode === 0) {
+        return 'Success';
+    } else {
+        return 'Failed'; // You can customize this message as needed
+    }
+});
