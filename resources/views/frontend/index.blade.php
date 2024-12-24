@@ -44,13 +44,13 @@
 
                         <!-- Call to Action Buttons -->
                         <div class="mt-8 flex flex-wrap justify-center gap-4">
-                            <a href="{{route('frontend.index')}}" class="block w-full rounded border border-green-600 bg-gradient-to-r from-green-500 to-black  px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto" href="#">
+                            {{-- <a href="{{route('frontend.index')}}" class="block w-full rounded border border-green-600 bg-gradient-to-r from-green-500 to-black  px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto" href="#">
                                 Get Started
-                            </a>
+                            </a> --}}
 
-                            <a href="{{route('frontend.index')}}" class="block w-full rounded border border-green-600 px-12 py-3 text-sm font-medium text-white hover:bg-gradient-to-r from-green-500 to-black  focus:outline-none focus:ring active:bg-green-500 sm:w-auto" href="#">
+                            {{-- <a href="{{route('frontend.index')}}" class="block w-full rounded border border-green-600 px-12 py-3 text-sm font-medium text-white hover:bg-gradient-to-r from-green-500 to-black  focus:outline-none focus:ring active:bg-green-500 sm:w-auto" href="#">
                                 Learn More
-                            </a>
+                            </a> --}}
                         </div>
                     </div>
                 </div>
