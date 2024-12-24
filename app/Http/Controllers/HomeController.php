@@ -29,7 +29,7 @@ class HomeController extends Controller
     }
 
     public function thankyou(){
-        return view('Frontend.thankyou');
+        return view('frontend.thankyou');
     }
 
 }
