@@ -27,32 +27,40 @@
         <div class="w-full md:w-1/2 px-4">
           <h2 class="text-3xl font-bold mb-2">{{ $product->title }}</h2>
           <p class="text-gray-600 mb-4">SKU: {{ $product->sku_number }}</p>
-      
+
           <div class="mb-4">
               <span class="text-2xl font-bold mr-2"> ₹:-{{ $product->price }}</span>
               {{-- <span class="text-gray-500 line-through">$399.99</span> --}}
           </div>
-      
+
           <!-- Short Description -->
-          <p class="text-gray-700 mb-6">short description</p>
-      
+          <div class="mb-6">
+            <h3 class="text-lg font-semibold mb-2">ShortDescription:</h3>
+            <p class="text-gray-700">{!! $product->short_description !!}</p>
+        </div>
+
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold mb-2">LongDescription:</h3>
+            <p class="text-gray-700">{!! $product->long_description !!}</p>
+        </div>
+
           <!-- Long Description -->
-          <p class="text-gray-700 mb-6">long description</p>
-      
+
+          
           <!-- Category & Types -->
           <div class="mb-6">
               <h3 class="text-lg font-semibold mb-2">Category:</h3>
               <p class="text-gray-700">{{ $product->category_name }}</p>
           </div>
-      
-     
-{{--       
+
+
+{{--
           <!-- Quantity -->
           <div class="mb-6">
               <label for="quantity" class="block text-sm font-medium text-gray-700 mb-1">Quantity:</label>
               {{ $product->qty }}
           </div> --}}
-      
+
           <!-- Key Features -->
           <div class="mb-6">
               <h3 class="text-lg font-semibold mb-2">Key Features:</h3>
@@ -65,9 +73,9 @@
                   <li>{{ $product->f_6 }}</li>
               </ul>
           </div>
-      
-         
-      
+
+
+
           <!-- Contact Us Button -->
           <div>
               <button class="bg-gradient-to-r from-green-500 to-black flex gap-2 items-center text-white px-6 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
@@ -79,7 +87,7 @@
               </button>
           </div>
       </div>
-      
+
       </div>
     </div>
 
