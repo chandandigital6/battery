@@ -28,7 +28,7 @@ class AppointmentController extends Controller
 //    }
 
     public function store(AppointmentRequest $request){
-//        dd($request);
+    //    dd($request);
         $appointment=Appointment::create($request->all());
         if($appointment){
             Mail::to($request->email)->send(new AppointmentCreated($appointment));
@@ -69,5 +69,5 @@ class AppointmentController extends Controller
         return redirect()->back();
     }
 
-   
+
 }

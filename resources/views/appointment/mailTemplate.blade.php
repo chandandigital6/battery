@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge;">
-    <title>Student Appointment Confirmation</title>
+    <title>  Confirmation Email</title>
     <style type="text/css">
         /* General Styles */
         body, table, td, a {
@@ -105,20 +105,20 @@
             <li><strong>Name:</strong> {{ $appointment->name }}</li>
             <li><strong>Email:</strong> {{ $appointment->email }}</li>
             <li><strong>Phone Number:</strong> {{ $appointment->number }}</li>
-            <li><strong>Course:</strong> {{ $appointment->course }}</li>
+            <li><strong>Msg:</strong> {{ $appointment->msg }}</li>
 
         </ul>
 
         <p>If you have any questions or need to reschedule, please feel free to contact us at +918423269465.</p>
 
         <p>Thank you,<br>
-            RealVictoryGroups.com</p>
+            https://lithopowerr.com/</p>
     </div>
 
     <!-- Footer -->
     <div class="email-footer">
         <p>This is an automated notification. Please do not reply to this email.</p>
-        <p>&copy; {{ date('Y') }}  RealVictoryGroups.com. All rights reserved.</p>
+        <p>&copy; {{ date('Y') }}  lithopowerr.com. All rights reserved.</p>
     </div>
 </div>
 </body>

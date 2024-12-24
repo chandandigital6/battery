@@ -25,13 +25,12 @@ class AboutController extends Controller
     }
 
     public function store(AboutRequest $request){
-//        dd($request);
-
         $about=About::create($request->all());
-        $image = $request->file('image')->store('public/about');
-
-        $about->image = str_replace('public/', '', $image);
-        $about->save();
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('about', 'public'); // Save the image to the 'about' folder
+            $about->image = str_replace('public/', '', $imagePath); // Update the image field
+            $about->save(); // Save the changes to the database
+        }
         return redirect()->route('about.index')->with('success', 'About  created successfully.');
     }
 

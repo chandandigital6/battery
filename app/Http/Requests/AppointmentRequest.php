@@ -26,7 +26,7 @@ class AppointmentRequest extends FormRequest
             'name' => 'required|string|max:255',
             'email' => 'nullable|email|max:255',
             'number' => 'required|string|max:255',
-            'course' => 'nullable',
+            'msg' => 'nullable',
 
         ];
     }

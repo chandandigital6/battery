@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge;">
-    <title>New Appointment Created</title>
+    <title>New Lead Created</title>
     <style type="text/css">
         body, table, td, a {
             -webkit-text-size-adjust: 100%;
@@ -90,17 +90,17 @@
 <div class="email-container">
     <!-- Header -->
     <div class="email-header">
-        <h2>New Appointment Created</h2>
+        <h2>New Lead Created</h2>
     </div>
 
     <!-- Body -->
     <div class="email-body">
-        <p><strong>Appointment Details:</strong></p>
+        <p><strong>Lead Details:</strong></p>
         <ul>
             <li><strong>Name:</strong> {{ $appointment->name }}</li>
             <li><strong>Email:</strong> {{ $appointment->email }}</li>
             <li><strong>Phone Number:</strong> {{ $appointment->number }}</li>
-            <li><strong>Course:</strong> {{ $appointment->course }}</li>
+            <li><strong>Msg:</strong> {{ $appointment->msg }}</li>
         </ul>
         <p style="color: #555555;">Please review the above details. If any information is incorrect, contact us immediately.</p>
     </div>
@@ -108,7 +108,7 @@
     <!-- Footer -->
     <div class="email-footer">
         <p>This is an automated notification. Please do not reply to this email.</p>
-        <p>&copy; {{ date('Y') }} Your Organization Name. All rights reserved.</p>
+        <p>&copy; {{ date('Y') }} https://lithopowerr.com. All rights reserved.</p>
     </div>
 </div>
 </body>

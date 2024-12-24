@@ -79,7 +79,7 @@
 
 
             <div class="p-6 bg-gradient-to-r from-green-500 to-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div class="flex justify-center"><img src="{{asset('storage/'.$ab->image)}}" alt="" class="h-24 w-24"></div>
+                {{-- <div class="flex justify-center"><img src="{{asset('storage/'.$ab->image)}}" alt="" class="h-24 w-24"></div> --}}
                 <h3 class="text-2xl font-semibold text-white">{{ $ab->title }}</h3>
                 <p class="mt-4 text-gray-100">
        {!! $ab->description !!}
@@ -327,7 +327,8 @@
         <div class="flex flex-col justify-center">
           <h3 class="text-2xl font-semibold">Contact Us</h3>
           <p class="mt-4 text-lg">Fill out the form below to reach our team.</p>
-          <form action="#" method="POST" class="mt-6 space-y-6">
+          <form action="{{ route('appointment.store') }}" method="POST" class="mt-6 space-y-6">
+            @csrf
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <!-- Name Field -->
               <div>
@@ -340,12 +341,17 @@
                 <label for="email" class="block text-sm font-medium">Email Address</label>
                 <input type="email" id="email" name="email" required class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-green-500" />
               </div>
-            </div>
 
+
+            </div>
+            <div>
+                <label for="number" class="block text-sm font-medium">number </label>
+                <input type="number" id="number" name="number" required class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-green-500" />
+              </div>
             <!-- Message Field -->
             <div>
               <label for="message" class="block text-sm font-medium">Message</label>
-              <textarea id="message" name="message" rows="4" required class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+              <textarea id="message" name="msg" rows="4" required class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
             </div>
 
             <!-- Submit Button -->
