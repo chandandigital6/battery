@@ -81,7 +81,7 @@
             <div class="p-6 bg-gradient-to-r from-green-500 to-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 {{-- <div class="flex justify-center"><img src="{{asset('storage/'.$ab->image)}}" alt="" class="h-24 w-24"></div> --}}
                 <h3 class="text-2xl font-semibold text-white">{{ $ab->title }}</h3>
-                <p class="mt-4 text-gray-100">
+                <p class="mt-4 text-white">
        {!! $ab->description !!}
                 </p>
             </div>
