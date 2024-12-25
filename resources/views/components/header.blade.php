@@ -1,5 +1,5 @@
-<nav class="bg-gradient-to-l from-green-500 to-black w-full z-30">
-  <div class="container mx-auto flex items-center justify-between px-4 py-4 md:px-24">
+<nav class="bg-[#012D14] w-full z-30">
+  <div class="container mx-auto flex items-center justify-between px-4 py-2 md:px-24">
       <!-- Logo Section -->
       <div class="flex items-center">
           <a href="/" class="hover:opacity-90 transition-opacity duration-300">
@@ -51,18 +51,18 @@
                           <a href="#product">Products</a>
                       </button>
                       <!-- Mobile Dropdown -->
-                      <div class="md:absolute md:left-0 md:hidden md:group-hover:block md:w-48 md:bg-green-300 md:rounded-md md:shadow-lg">
+                      <div class="md:absolute md:left-0 md:hidden md:group-hover:block md:w-48 md:bg-[#012D14] md:rounded-md md:shadow-lg">
                           <ul class="md:py-2 space-y-4 md:space-y-0">
-                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-green-500 font-light text-white">Lead-Battery</a></li>
-                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-green-500 font-light text-white">Lead-acid Battery</a></li>
-                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-green-500 font-light text-white">Lead-acid Battery</a></li>
-                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-green-500 font-light text-white">More</a></li>
+                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-green-500 font-light text-white">Invertor-Battery</a></li>
+                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-green-500 font-light text-white">E-rikshaw Battery</a></li>
+                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-green-500 font-light text-white">Two Wheel Battery</a></li>
+
                           </ul>
                       </div>
                   </li>
                  
                   <li class="w-full md:w-auto text-center md:text-left">
-                      <a href="#service" class="block py-2 text-md md:text-md hover:text-green-500 transition-colors duration-300 font-light text-white">Service</a>
+                      <a href="#service" class="block py-2 text-md md:text-md hover:text-green-500 transition-colors duration-300 font-light text-white">Testimonial</a>
                   </li>
               </ul>
           </div>

@@ -20,7 +20,7 @@
 
 
     {{-- banner --}}
-    <div class="h-96 w-full relative" id="home">
+    <div class="h-full w-full relative" id="home">
         <!-- Background Image -->
         @foreach ($banners as $banner)
 
@@ -32,7 +32,7 @@
                 <div class="mx-auto max-w-full px-4 py-32 lg:flex lg:h-screen lg:items-center">
                     <div class="mx-auto max-w-3xl text-center">
                         <!-- Header Title with Gradient -->
-                        <h1 class="bg-gradient-to-r from-green-300 via-green-500 to-teal-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
+                        <h1 class="text-yellow-500 text-3xl font-extrabold text-transparent sm:text-5xl">
                             {{ $banner->title }}
                             {{-- <span class="sm:block">Increase Conversion.</span> --}}
                         </h1>
@@ -61,15 +61,15 @@
     </div>
 
 {{-- ABOUT US:::::::: --}}
-<section id="about" class="py-16 bg-gradient-to-r from-green-300 to-black-500">
+<section id="about" class="py-16 bg-[#012D14]">
     <div class="container mx-auto px-6 text-center">
         @foreach ($abouts->take(1) as $about)
 
 
-        <h2 class="text-4xl font-extrabold text-green-900 sm:text-5xl">
+        <h2 class="text-4xl font-extrabold text-yellow-500 sm:text-5xl">
          {{ $about->title }}
         </h2>
-        <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
+        <p class="mt-4 text-lg text-white max-w-3xl mx-auto">
 {!! $about->description !!}
         </p>
         @endforeach
@@ -78,7 +78,7 @@
             @foreach ($abouts->skip(1)->take(3) as $ab)
 
 
-            <div class="p-6 bg-gradient-to-r from-green-500 to-black text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="p-6 bg-[#012D14] text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 {{-- <div class="flex justify-center"><img src="{{asset('storage/'.$ab->image)}}" alt="" class="h-24 w-24"></div> --}}
                 <h3 class="text-2xl font-semibold text-white">{{ $ab->title }}</h3>
                 <p class="mt-4 text-white">
@@ -108,7 +108,7 @@
         {{-- <h2 class="text-4xl font-extrabold text-green-900 sm:text-5xl">
             {{ $about->title }}
         </h2> --}}
-        <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
+        <p class="mt-4 text-lg text-white max-w-3xl mx-auto">
             {!! $about->description !!}
         </p>
     @endforeach
@@ -124,10 +124,10 @@
 
 
    {{-- Explore Products --}}
-   <div id="product" class="bg-gradient-to-r from-green-300 to-black-500 py-10">
+   <div id="product" class="bg-[#012D14] py-10">
     <!-- Section Heading -->
     <div class="font-bold flex justify-center mb-8">
-      <h1 class="text-4xl text-green-900">Explore Battery</h1>
+      <h1 class="text-4xl text-yellow-500">Explore Battery</h1>
     </div>
 
     <!-- Cards Grid -->
@@ -142,11 +142,11 @@
           class="w-full h-48 object-cover"
         />
         <div class="p-6">
-          <h1 class="text-xl font-bold text-gray-800">{{ $product->title }}</h1>
-          <p class="text-gray-600 mt-2">
+          <h1 class="text-xl font-bold text-yellow-500">{{ $product->title }}</h1>
+          <p class="text-[#012D14] mt-2">
            {{$product->sub_title}}
           </p>
-          <button class="mt-4 px-4 py-2 bg-gradient-to-r from-green-500 to-black text-white rounded hover:from-green-700 hover:to-black">
+          <button class="mt-4 px-4 py-2 bg-[#012D14] text-white rounded hover:from-green-700 hover:to-black">
            <a href="{{route('frontend.detail',$product->id)}}"> View Details</a>
           </button>
         </div>
@@ -227,13 +227,14 @@
 
 
 <div id="service" class="bg-no-repeat bg-cover bg-center relative h-110" style="background-image: url(https://t3.ftcdn.net/jpg/11/37/40/66/240_F_1137406643_OvLrCrhqvxD4ZIiWNcM6eyw7ucJNAj7Q.jpg);">
- <div class="absolute bg-gradient-to-r from-gray-900 to-gray-900 opacity-75 inset-0 z-0"></div>
+ <div class="absolute bg-[#012D14] opacity-75 inset-0 z-0"></div>
 <div>
     <div class="min-h-100 flex justify-center md:mx-32">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center z-10">
           <!-- Left Section -->
           <div class="max-w-lg text-center sm:text-left">
-            <h2 class=" text-xl mt-4 md:text-4xl font-bold text-gray-100 tracking-tight">
+            <h1 class="text-2xl mt-4 md:text-4xl font-bold text-yellow-500 tracking-tight">Testimonial</h1>
+            <h2 class=" text-xl md:text-4xl font-bold text-gray-100 tracking-tight">
               What our <br class="hidden sm:block lg:hidden"> clients say about the Litho Power batteries
             </h2>
             {{-- <p class="mt-4 text-gray-300">
@@ -255,7 +256,7 @@
           </div>
 
           <!-- Right Section -->
-          <div class="mx-0 max-w-xl my-6 flex rounded-2xl bg-gradient-to-r from-green-500 to-black">
+          <div class="mx-0 max-w-xl my-6 flex rounded-2xl bg-[#012D14]">
             <div class="swiper-container flex-col flex self-center">
               <div class="swiper-wrapper">
                 @foreach ($testimonials as $testimonial)
@@ -264,7 +265,7 @@
                 <div class="swiper-slide">
                   <blockquote class="text-left">
                     <div class="relative">
-                      <img src="{{asset('storage/'.$testimonial->image)}}" alt="aji" class="object-cover w-full h-60 mx-auto rounded-t-2xl"/>
+                      <img src="{{asset('storage/'.$testimonial->image)}}" alt="aji" class="object-cover w-full h-80 mx-auto rounded-t-2xl"/>
                       <div class="rounded-t-2xl absolute bg-gradient-to-t from-gray-800 opacity-75 inset-0 z-0"></div>
                     </div>
                     <div class="relative m-5 p-5">
@@ -290,7 +291,7 @@
 
 
 
-<section class="bg-gradient-to-r from-green-300 to-black-500 py-16">
+<section class="bg-[#012D14] py-16">
     @foreach ($missionViosions as $mv)
 
 
@@ -303,8 +304,8 @@
       <!-- Vision Section -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 md:mx-32">
         <div class="text-center md:text-left">
-          <h3 class="text-2xl font-semibold text-green-600">{{ $mv->vision }}</h3>
-          <p class="mt-4 text-lg text-gray-700">
+          <h3 class="text-2xl font-semibold text-yellow-500">{{ $mv->vision }}</h3>
+          <p class="mt-4 text-lg text-white">
            {!! $mv->vision_description !!}
           </p>
 
@@ -312,8 +313,8 @@
 
         <!-- Mission Section -->
         <div class="text-center md:text-left">
-          <h3 class="text-2xl font-semibold text-green-600">{{ $mv->mission }}</h3>
-          <p class="mt-4 text-lg text-gray-700">
+          <h3 class="text-2xl font-semibold text-yellow-500">{{ $mv->mission }}</h3>
+          <p class="mt-4 text-lg text-white">
       {!! $mv->mission_description !!}
         </p>
           {{-- <ul class="mt-4 list-disc pl-6 text-gray-700 space-y-2">
@@ -330,17 +331,17 @@
   </section>
 
 
-  <section id="contact" class="bg-gradient-to-r from-green-800 to-black py-16">
+  <section id="contact" class="bg-[#012D14] py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 text-white">
       <div class="text-center">
-        <h2 class="text-3xl font-semibold">Get in Touch</h2>
+        <h2 class="text-3xl font-semibold text-yellow-500">Get in Touch</h2>
         <p class="mt-4 text-lg">Have questions or need more information? We are here to help!</p>
       </div>
 
       <!-- Contact Form -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
         <div class="flex flex-col justify-center">
-          <h3 class="text-2xl font-semibold">Contact Us</h3>
+          <h3 class="text-2xl font-semibold text-yellow-500">Contact Us</h3>
           <p class="mt-4 text-lg">Fill out the form below to reach our team.</p>
           <form action="{{ route('appointment.store') }}" method="POST" class="mt-6 space-y-6">
             @csrf
@@ -371,7 +372,7 @@
 
             <!-- Submit Button -->
             <div>
-              <button type="submit" class="w-full bg-gradient-to-r from-green-300 to-green-800  hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+              <button type="submit" class="w-full border border-yellow-500  hover:bg-yellow-500 text-yellow-500 hover:text-green-900 font-semibold py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
                 Send Message
               </button>
             </div>

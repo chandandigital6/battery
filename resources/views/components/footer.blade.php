@@ -1,17 +1,17 @@
 <!-- component -->
-<footer class="bg-gradient-to-r from-gray-100 via-[#B4F5CC] to-gray-100">
+<footer class="bg-black bg-opacity-65">
     <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div>
-            <a href="#" class="text-black font-semibold text-xl">
+            <a href="#" class="text-white font-semibold text-xl">
                 {{-- Σ-BΛƬƬΣЯY --}}
                 <img src="{{asset('asset/img/LITHO_POWER.png')}}" alt="" class="w-20 h-20">
             </a>
         {{-- <img src="#" class="mr-5 h-6 sm:h-9" alt="logo" /> --}}
-          <p class="max-w-xs mt-4 text-sm text-gray-600">
+          <p class="max-w-xs mt-4 text-sm text-white">
             We are providing latest batteries for the e-vehicles like 2 wheeler, 3 wheeler etc
           </p>
-          <div class="flex mt-8 space-x-6 text-gray-600">
+          <div class="flex mt-8 space-x-6 text-white">
             <a class="hover:opacity-75" href="https://www.facebook.com" target="_blank" rel="noreferrer">
               <span class="sr-only"> Facebook </span>
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -46,10 +46,10 @@
         </div>
         <div class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p class="font-medium">
+            <p class="font-medium text-yellow-500">
               E-Battery
             </p>
-            <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+            <nav class="flex flex-col mt-4 space-y-2 text-sm text-white">
               <a class="hover:opacity-75" href ="#home"> Home </a>
               <a class="hover:opacity-75" href ="#about"> About </a>
               <a class="hover:opacity-75" href ="#product"> Product </a>
@@ -57,10 +57,10 @@
             </nav>
           </div>
           <div>
-            <p class="font-medium">
+            <p class="font-medium text-yellow-500">
               Services
             </p>
-            <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+            <nav class="flex flex-col mt-4 space-y-2 text-sm text-white">
               <a class="hover:opacity-75" href ="#product">E-Battery </a>
               <a class="hover:opacity-75" href ="#product">2 Wheeler Battery </a>
               <a class="hover:opacity-75" href =#product>3 Wheeler Battery</a>
@@ -69,20 +69,20 @@
             </nav>
           </div>
           <div>
-            <p class="font-medium">
+            <p class="font-medium text-yellow-500">
               Helpful Links
             </p>
-            <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+            <nav class="flex flex-col mt-4 space-y-2 text-sm text-white">
               <a class="hover:opacity-75" href =#contact> Contact us</a>
               <a class="hover:opacity-75" href> FAQs </a>
               <a class="hover:opacity-75" href> Live Chat </a>
             </nav>
           </div>
           <div>
-            <p class="font-medium">
+            <p class="font-medium text-yellow-500">
               Legal
             </p>
-            <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+            <nav class="flex flex-col mt-4 space-y-2 text-sm text-white">
               <a class="hover:opacity-75" href> Privacy Policy </a>
               <a class="hover:opacity-75" href> Terms &amp; Conditions </a>
               <a class="hover:opacity-75" href> Returns Policy </a>
@@ -91,7 +91,7 @@
           </div>
         </div>
       </div>
-      <p class="mt-8 text-xs text-gray-800">
+      <p class="mt-8 text-xs text-white">
         © 2024 Real Victory Groups
       </p>
     </div>
