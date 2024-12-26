@@ -48,6 +48,7 @@ Route::get('reset-password', [AuthController::class, 'reset_password'])->name('r
 Route::post('store-password', [AuthController::class, 'store_password'])->name('store-password');
 
 Route::post('appointment/store', [AppointmentController::class, 'store'])->name('appointment.store');
+Route::get('product/qr/{product}', [ProductController::class, 'showQr'])->name('product.qr');
 
 Route::get('/change-password', [AuthController::class, 'showChangePasswordForm'])->name('auth.change-password-form');
 Route::post('/update-password', [AuthController::class, 'updatePassword'])->name('auth.update-password');

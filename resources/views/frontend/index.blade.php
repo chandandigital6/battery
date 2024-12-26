@@ -108,13 +108,13 @@
         {{-- <h2 class="text-4xl font-extrabold text-green-900 sm:text-5xl">
             {{ $about->title }}
         </h2> --}}
-        <p class="mt-4 text-lg text-white max-w-3xl mx-auto">
+        <span class="mt-4 text-lg text-white max-w-3xl mx-auto " style="">
             {!! $about->description !!}
-        </p>
+        </span>
     @endforeach
     </div>
 </section>
-{{-- 
+{{--
 <section id="about" class="py-12  bg-gradient-to-r from-green-300 to-black-500">
   <div class="container mx-auto px-6 text-center">
 

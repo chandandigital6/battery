@@ -50,8 +50,8 @@
                                         <th>Title</th>
                                         <th>Sub Title</th>
                                         <th>SKU Number</th>
-                                        <th>Short Description</th>
-                                        <th>Long Description</th>
+                                        {{-- <th>Short Description</th> --}}
+                                        {{-- <th>Long Description</th> --}}
                                         <th>Quantity</th>
                                         <th>Price</th>
                                         <th>Category Name</th>
@@ -66,8 +66,8 @@
                                             <td>{{ $product->title }}</td>
                                             <td>{{ $product->sub_title }}</td>
                                             <td>{{ $product->sku_number }}</td>
-                                            <td>{!! $product->short_description !!}</td>
-                                            <td>{!! $product->long_description !!}</td>
+                                            {{-- <td>{!! $product->short_description !!}</td> --}}
+                                            {{-- <td>{!! $product->long_description !!}</td> --}}
                                             <td>{{ $product->qty }}</td>
                                             <td>{{ $product->price }}</td>
                                             <td>{{ $product->category_name }}</td>
@@ -75,6 +75,8 @@
                                                 <img src="{{ asset('storage/'.$product->image) }}" alt="{{ $product->title }}" style="max-width: 100px;">
                                             </td>
                                             <td>
+
+                                                {{-- <a href="{{ route('product.qr', $product->id) }}" class="btn btn-primary">showQr</a> --}}
                                                 <a href="{{ route('product.edit', $product->id) }}" class="btn btn-primary">Edit</a>
                                                 <a href="{{ route('product.delete', $product->id) }}" class="btn btn-danger">Delete</a>
                                                 <a href="{{ route('product.duplicate', $product->id) }}" class="btn btn-warning">Duplicate</a>
