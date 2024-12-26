@@ -28,7 +28,7 @@
       >
           <div class="flex flex-col h-full">
               <!-- Mobile Close Button -->
-              <button 
+              <button
                   id="mobile-menu-close"
                   class="md:hidden absolute top-4 right-4 text-gray-50 hover:text-green-50 z-50"
                   onclick="toggleMenu()"
@@ -45,22 +45,32 @@
                   <li class="w-full md:w-auto text-center md:text-left">
                       <a href="#about" class="block py-2 text-md md:text-md hover:text-green-500 transition-colors duration-300 font-light text-white">About</a>
                   </li>
-                  
-                  <li class="w-full md:w-auto text-center md:text-left relative group">
-                      <button class="w-full py-2 text-md md:text-md hover:text-green-500 transition-colors duration-300 focus:outline-none font-light text-white">
-                          <a href="#product">Products</a>
-                      </button>
-                      <!-- Mobile Dropdown -->
-                      <div class="md:absolute md:left-0 md:hidden md:group-hover:block md:w-48 md:bg-[#012D14] md:rounded-md md:shadow-lg">
-                          <ul class="md:py-2 space-y-4 md:space-y-0">
-                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-green-500 font-light text-white">Invertor-Battery</a></li>
-                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-green-500 font-light text-white">E-rikshaw Battery</a></li>
-                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-green-500 font-light text-white">Two Wheel Battery</a></li>
 
-                          </ul>
-                      </div>
-                  </li>
-                 
+                  @php
+                      $products=App\Models\Product::all();
+                    //   print_r($products)
+                  @endphp
+
+                  <li class="w-full md:w-auto text-center md:text-left relative group">
+                    <button class="w-full py-2 text-md md:text-md hover:text-green-500 transition-colors duration-300 focus:outline-none font-light text-white">
+                        <a href="#product">Products</a>
+                    </button>
+                    <!-- Mobile Dropdown -->
+                    <div class="md:absolute md:left-0 md:hidden md:group-hover:block md:w-48 md:bg-[#012D14] md:rounded-md md:shadow-lg">
+                        <ul class="md:py-2 space-y-4 md:space-y-0">
+                            @foreach($products as $category)
+                                <li>
+                                    <a href="{{ route('frontend.detail', $category->id) }}"
+                                       class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-green-500 font-light text-white">
+                                        {{ $category->title }}
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </li>
+
+
                   <li class="w-full md:w-auto text-center md:text-left">
                       <a href="#service" class="block py-2 text-md md:text-md hover:text-green-500 transition-colors duration-300 font-light text-white">Testimonial</a>
                   </li>
