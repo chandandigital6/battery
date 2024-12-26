@@ -73,7 +73,7 @@
 {!! $about->description !!}
         </p>
         @endforeach
-        <div class="mt-12 grid gap-12 lg:grid-cols-3 md:grid-cols-2">
+        <div class="mt-12 grid gap-12 lg:grid-cols-3 md:grid-cols-2 mb-4">
             <!-- Card 1 -->
             @foreach ($abouts->skip(1)->take(3) as $ab)
 
@@ -108,7 +108,7 @@
         {{-- <h2 class="text-4xl font-extrabold text-green-900 sm:text-5xl">
             {{ $about->title }}
         </h2> --}}
-        <span class="mt-4 text-lg text-white max-w-3xl mx-auto " style="">
+        <span class="mt-8 text-lg text-white max-w-3xl mx-auto " style="">
             {!! $about->description !!}
         </span>
     @endforeach
@@ -226,7 +226,7 @@
 <!-- component -->
 
 
-<div id="service" class="bg-no-repeat bg-cover bg-center relative h-110" style="background-image: url(https://t3.ftcdn.net/jpg/11/37/40/66/240_F_1137406643_OvLrCrhqvxD4ZIiWNcM6eyw7ucJNAj7Q.jpg);">
+<div id="testimonial" class="bg-no-repeat bg-cover bg-center relative h-110" style="background-image: url(https://t3.ftcdn.net/jpg/11/37/40/66/240_F_1137406643_OvLrCrhqvxD4ZIiWNcM6eyw7ucJNAj7Q.jpg);">
  <div class="absolute bg-[#012D14] opacity-75 inset-0 z-0"></div>
 <div>
     <div class="min-h-100 flex justify-center md:mx-32">

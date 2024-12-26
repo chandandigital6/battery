@@ -72,7 +72,7 @@
 
 
                   <li class="w-full md:w-auto text-center md:text-left">
-                      <a href="#service" class="block py-2 text-md md:text-md hover:text-green-500 transition-colors duration-300 font-light text-white">Testimonial</a>
+                      <a href="#testimonial" class="block py-2 text-md md:text-md hover:text-green-500 transition-colors duration-300 font-light text-white">Testimonial</a>
                   </li>
               </ul>
           </div>
