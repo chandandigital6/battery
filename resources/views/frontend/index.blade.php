@@ -26,7 +26,7 @@
     <div class="flex items-center justify-center bg-green-200 h-full w-full px-4 py-8">
       <div class="space-y-4 text-center">
         <!-- Header Title -->
-        <h1 class="text-3xl font-extrabold sm:text-5xl text-green-500">
+        <h1 class="text-3xl font-extrabold sm:text-5xl text-[#255D3A]">
           {{ $banner->title }}
         </h1>
     
@@ -56,7 +56,7 @@
         @foreach ($abouts->take(1) as $about)
 
 
-        <h2 class="text-4xl font-extrabold text-[#03DD5E] sm:text-5xl">
+        <h2 class="text-4xl font-extrabold text-[#255D3A] sm:text-5xl">
          {{ $about->title }}
         </h2>
         <p class="mt-4 text-lg text-black max-w-3xl mx-auto">
@@ -70,7 +70,7 @@
 
             <div class="p-6 bg-white text-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 {{-- <div class="flex justify-center"><img src="{{asset('storage/'.$ab->image)}}" alt="" class="h-24 w-24"></div> --}}
-                <h3 class="text-2xl font-semibold text-[#03DD5E]">{{ $ab->title }}</h3>
+                <h3 class="text-2xl font-semibold text-[#255D3A]">{{ $ab->title }}</h3>
                 <p class="mt-4 text-black">
                   {!! $ab->description !!}
                 </p>
@@ -117,7 +117,7 @@
    <div id="product" class="bg-white py-10">
     <!-- Section Heading -->
     <div class="font-bold flex justify-center mb-8">
-      <h1 class="text-4xl text-[#03DD5E]">Explore Battery</h1>
+      <h1 class="text-4xl text-[#255D3A]">Explore Battery</h1>
     </div>
 
     <!-- Cards Grid -->
@@ -132,11 +132,11 @@
           class="w-full h-48 object-cover"
         />
         <div class="p-6">
-          <h1 class="text-xl font-bold text-[#03DD5E]">{{ $product->title }}</h1>
+          <h1 class="text-xl font-bold text-[#255D3A]">{{ $product->title }}</h1>
           <p class="text-[#012D14] mt-2">
            {{$product->sub_title}}
           </p>
-          <button class="mt-4 px-4 py-2 bg-[#03DD5E] text-white rounded hover:from-green-700 hover:to-black">
+          <button class="mt-4 px-4 py-2 bg-[#255D3A] text-white rounded hover:from-green-700 hover:to-black">
            <a href="{{route('frontend.detail',$product->id)}}"> View Details</a>
           </button>
         </div>
@@ -223,7 +223,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center z-10">
           <!-- Left Section -->
           <div class="max-w-lg text-center sm:text-left">
-            <h1 class="text-2xl mt-4 md:text-4xl font-bold text-[#03DD5E] tracking-tight">Testimonial</h1>
+            <h1 class="text-2xl mt-4 md:text-4xl font-bold text-[#255D3A] tracking-tight">Testimonial</h1>
             <h2 class=" text-xl md:text-4xl font-bold text-black tracking-tight">
               What our <br class="hidden sm:block lg:hidden"> clients say about the Litho Power batteries
             </h2>
@@ -246,7 +246,7 @@
           </div>
 
           <!-- Right Section -->
-          <div class="mx-0 max-w-xl my-6 flex rounded-2xl bg-[#03DD5E]">
+          <div class="mx-0 max-w-xl my-6 flex rounded-2xl bg-[#255D3A]">
             <div class="swiper-container flex-col flex self-center">
               <div class="swiper-wrapper">
                 @foreach ($testimonials as $testimonial)
@@ -259,7 +259,7 @@
                       <div class="rounded-t-2xl absolute bg-gradient-to-t from-gray-800 opacity-75 inset-0 z-0"></div>
                     </div>
                     <div class="relative m-5 p-5">
-                      <p class="text-black text-xl px-5">
+                      <p class="text-white text-xl px-5">
                        {{ $testimonial->msg }}
                       </p>
                     </div>
@@ -287,14 +287,14 @@
 
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="text-center">
-        <h2 class="text-3xl font-semibold text-[#03DD5E]">{{ $mv->title }}</h2>
+        <h2 class="text-3xl font-semibold text-[#255D3A]">{{ $mv->title }}</h2>
         <p class="mt-4 text-lg text-black">{{ $mv->sub_title }}</p>
       </div>
 
       <!-- Vision Section -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 md:mx-32">
         <div class="text-center md:text-left">
-          <h3 class="text-2xl font-semibold text-[#03DD5E]">{{ $mv->vision }}</h3>
+          <h3 class="text-2xl font-semibold text-[#255D3A]">{{ $mv->vision }}</h3>
           <p class="mt-4 text-lg text-black">
            {!! $mv->vision_description !!}
           </p>
@@ -303,7 +303,7 @@
 
         <!-- Mission Section -->
         <div class="text-center md:text-left">
-          <h3 class="text-2xl font-semibold text-[#03DD5E]">{{ $mv->mission }}</h3>
+          <h3 class="text-2xl font-semibold text-[#255D3A]">{{ $mv->mission }}</h3>
           <p class="mt-4 text-lg text-black">
       {!! $mv->mission_description !!}
         </p>
@@ -324,14 +324,14 @@
   <section id="contact" class="bg-white py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 text-white">
       <div class="text-center">
-        <h2 class="text-3xl font-semibold text-[#03DD5E]">Get in Touch</h2>
+        <h2 class="text-3xl font-semibold text-[#255D3A]">Get in Touch</h2>
         <p class="mt-4 text-lg text-black">Have questions or need more information? We are here to help!</p>
       </div>
 
       <!-- Contact Form -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
         <div class="flex flex-col justify-center">
-          <h3 class="text-2xl font-semibold text-[#03DD5E]">Contact Us</h3>
+          <h3 class="text-2xl font-semibold text-[#255D3A]">Contact Us</h3>
           <p class="mt-4 text-lg text-black">Fill out the form below to reach our team.</p>
           <form action="{{ route('appointment.store') }}" method="POST" class="mt-6 space-y-6">
             @csrf
@@ -362,7 +362,7 @@
 
             <!-- Submit Button -->
             <div>
-              <button type="submit" class="w-full border border-[#03DD5E] hover:bg-[#03DD5E] text-black hover:text-black font-semibold py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500">
+              <button type="submit" class="w-full border border-[#255D3A] hover:bg-[#255D3A] text-black hover:text-white font-semibold py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500">
                 Send Message
               </button>
             </div>
@@ -371,7 +371,7 @@
 
         <!-- Contact Information Section -->
         <div class="flex flex-col justify-center">
-          <h3 class="text-2xl font-semibold text-[#03DD5E]">Our Office</h3>
+          <h3 class="text-2xl font-semibold text-[#255D3A]">Our Office</h3>
           <p class="mt-4 text-lg text-black ">You can also reach us at the following address:</p>
           <div class="mt-6 text-lg text-black">
             <p><strong> Factory:</strong> B15 Rania, Kanpur

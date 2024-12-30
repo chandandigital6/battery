@@ -46,7 +46,7 @@
         </div>
         <div class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p class="font-medium text-yellow-500">
+            <p class="font-medium text-[#03FA71]">
               E-Battery
             </p>
             <nav class="flex flex-col mt-4 space-y-2 text-sm text-white">
@@ -57,7 +57,7 @@
             </nav>
           </div>
           <div>
-            <p class="font-medium text-yellow-500">
+            <p class="font-medium text-[#03FA71]">
               Services
             </p>
             <nav class="flex flex-col mt-4 space-y-2 text-sm text-white">
@@ -69,7 +69,7 @@
             </nav>
           </div>
           <div>
-            <p class="font-medium text-yellow-500">
+            <p class="font-medium text-[#03FA71]">
               Helpful Links
             </p>
             <nav class="flex flex-col mt-4 space-y-2 text-sm text-white">
@@ -79,7 +79,7 @@
             </nav>
           </div>
           <div>
-            <p class="font-medium text-yellow-500">
+            <p class="font-medium text-[#03FA71]">
               Legal
             </p>
             <nav class="flex flex-col mt-4 space-y-2 text-sm text-white">
