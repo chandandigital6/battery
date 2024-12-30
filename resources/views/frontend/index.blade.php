@@ -384,9 +384,15 @@
           <h3 class="text-2xl font-semibold text-[#00FF71]">Our Office</h3>
           <p class="mt-4 text-lg text-black ">You can also reach us at the following address:</p>
           <div class="mt-6 text-lg text-black">
-            <p><strong>Address:</strong> 1234 E-Battery Lane, Green City, Earth</p>
-            <p class="mt-2"><strong>Phone:</strong> (123) 456-7890</p>
-            <p class="mt-2"><strong>Email:</strong> support@ebattery.com</p>
+            <p><strong> Factory:</strong> B15 Rania, Kanpur
+              Dehat, Uttar Pradesh – 209304</p>
+            <p class="mt-2"><strong>Phone:</strong>8090354027</p>
+            <p class="mt-2"><strong>Email:</strong> lithopower25@gmail.com
+             </p>
+             <p class="mt-2"> <strong>Website:</strong>
+              www.lithopowerr.com</p>
+              <p class="mt-2"> <strong>Visit:</strong> www.eprrecycler.com
+                </p>
           </div>
         </div>
       </div>
