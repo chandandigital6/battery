@@ -324,14 +324,14 @@
   <section id="contact" class="bg-white py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 text-white">
       <div class="text-center">
-        <h2 class="text-3xl font-semibold text-[#255D3A]">Get in Touch</h2>
+        <h2 class="text-3xl font-semibold text-[#255D3A] font-bold text-4xl">Get in Touch</h2>
         <p class="mt-4 text-lg text-black">Have questions or need more information? We are here to help!</p>
       </div>
 
       <!-- Contact Form -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
         <div class="flex flex-col justify-center">
-          <h3 class="text-2xl font-semibold text-[#255D3A]">Contact Us</h3>
+          <h3 class="text-2xl font-semibold text-[#255D3A] font-bold text-xl">Contact Us</h3>
           <p class="mt-4 text-lg text-black">Fill out the form below to reach our team.</p>
           <form action="{{ route('appointment.store') }}" method="POST" class="mt-6 space-y-6">
             @csrf
@@ -371,7 +371,7 @@
 
         <!-- Contact Information Section -->
         <div class="flex flex-col justify-center">
-          <h3 class="text-2xl font-semibold text-[#255D3A]">Our Office</h3>
+          <h3 class="text-2xl font-semibold text-[#255D3A] font-bold text-xl">Our Office</h3>
           <p class="mt-4 text-lg text-black ">You can also reach us at the following address:</p>
           <div class="mt-6 text-lg text-black">
             <p><strong> Factory:</strong> B15 Rania, Kanpur
