@@ -1,4 +1,4 @@
-<nav class="bg-[#00FF71] w-full z-30">
+<nav class="bg-white w-full z-30">
   <div class="container mx-auto flex items-center justify-between px-4 py-2 md:px-24">
       <!-- Logo Section -->
       <div class="flex items-center">
@@ -56,7 +56,7 @@
                         <a href="#product">Products</a>
                     </button>
                     <!-- Mobile Dropdown -->
-                    <div class="md:absolute md:left-0 md:hidden md:group-hover:block md:w-48 md:bg-[#00FF71] md:rounded-md md:shadow-lg">
+                    <div class="md:absolute md:left-0 md:hidden md:group-hover:block md:w-48 md:bg-white md:rounded-md md:shadow-lg">
                         <ul class="md:py-2 space-y-4 md:space-y-0">
                             @foreach($products as $category)
                                 <li>

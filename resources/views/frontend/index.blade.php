@@ -18,47 +18,37 @@
     }
 </style>
 
-
-    {{-- banner --}}
-    <div class="h-full w-full relative" id="home">
-        <!-- Background Image -->
-        @foreach ($banners as $banner)
-
-
-        <img src="{{asset('storage/'.$banner->image)}}" alt="Banner Image" class="w-full h-full object-cover">
-        <!-- Overlay Text -->
-        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center p-4">
-            <section class="text-white">
-                <div class="mx-auto max-w-full px-4 py-32 lg:flex lg:h-screen lg:items-center">
-                    <div class="mx-auto max-w-3xl text-center">
-                        <!-- Header Title with Gradient -->
-                        <h1 class="text-[#00FF71] text-3xl font-extrabold  sm:text-5xl">
-                            {{ $banner->title }}
-                            {{-- <span class="sm:block">Increase Conversion.</span> --}}
-                        </h1>
-
-                        <!-- Description Text -->
-                        <p class="mx-auto mt-4 max-w-xl sm:text-xl text-opacity-75">
-                          {{ $banner->sub_title }}
-                        </p>
-
-                        <!-- Call to Action Buttons -->
-                        <div class="mt-8 flex flex-wrap justify-center gap-4">
-                            {{-- <a href="{{route('frontend.index')}}" class="block w-full rounded border border-green-600 bg-gradient-to-r from-green-500 to-black  px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto" href="#">
-                                Get Started
-                            </a> --}}
-
-                            {{-- <a href="{{route('frontend.index')}}" class="block w-full rounded border border-green-600 px-12 py-3 text-sm font-medium text-white hover:bg-gradient-to-r from-green-500 to-black  focus:outline-none focus:ring active:bg-green-500 sm:w-auto" href="#">
-                                Learn More
-                            </a> --}}
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        @endforeach
+ {{-- BANNER --}}
+ <div class="space-y-12 px-4 lg:px-0 ">
+  @foreach ($banners as $banner)
+  <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-0">
+    <!-- Text Content -->
+    <div class="flex items-center justify-center bg-green-200 h-full w-full px-4 py-8">
+      <div class="space-y-4 text-center">
+        <!-- Header Title -->
+        <h1 class="text-3xl font-extrabold sm:text-5xl text-green-500">
+          {{ $banner->title }}
+        </h1>
+    
+        <!-- Description -->
+        <p class="text-gray-700 text-lg sm:text-xl max-w-xl mx-auto">
+          {{ $banner->sub_title }}
+        </p>
+      </div>
     </div>
+    
+
+    <!-- Banner Image -->
+    <div>
+      <img 
+        src="{{ asset('storage/' . $banner->image) }}" 
+        alt="{{ $banner->title }}" 
+        class="w-full h-auto object-cover "
+      >
+    </div>
+  </div>
+  @endforeach
+</div>
 
 {{-- ABOUT US:::::::: --}}
 <section id="about" class="py-16 bg-white">
@@ -66,7 +56,7 @@
         @foreach ($abouts->take(1) as $about)
 
 
-        <h2 class="text-4xl font-extrabold text-[#00FF71] sm:text-5xl">
+        <h2 class="text-4xl font-extrabold text-[#03DD5E] sm:text-5xl">
          {{ $about->title }}
         </h2>
         <p class="mt-4 text-lg text-black max-w-3xl mx-auto">
@@ -78,9 +68,9 @@
             @foreach ($abouts->skip(1)->take(3) as $ab)
 
 
-            <div class="p-6 bg-[#012D14] text-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="p-6 bg-white text-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 {{-- <div class="flex justify-center"><img src="{{asset('storage/'.$ab->image)}}" alt="" class="h-24 w-24"></div> --}}
-                <h3 class="text-2xl font-semibold text-[#00FF71]">{{ $ab->title }}</h3>
+                <h3 class="text-2xl font-semibold text-[#03DD5E]">{{ $ab->title }}</h3>
                 <p class="mt-4 text-black">
                   {!! $ab->description !!}
                 </p>
@@ -127,7 +117,7 @@
    <div id="product" class="bg-white py-10">
     <!-- Section Heading -->
     <div class="font-bold flex justify-center mb-8">
-      <h1 class="text-4xl text-[#00FF71]">Explore Battery</h1>
+      <h1 class="text-4xl text-[#03DD5E]">Explore Battery</h1>
     </div>
 
     <!-- Cards Grid -->
@@ -142,11 +132,11 @@
           class="w-full h-48 object-cover"
         />
         <div class="p-6">
-          <h1 class="text-xl font-bold text-[#00FF71]">{{ $product->title }}</h1>
+          <h1 class="text-xl font-bold text-[#03DD5E]">{{ $product->title }}</h1>
           <p class="text-[#012D14] mt-2">
            {{$product->sub_title}}
           </p>
-          <button class="mt-4 px-4 py-2 bg-[#00FF71] text-white rounded hover:from-green-700 hover:to-black">
+          <button class="mt-4 px-4 py-2 bg-[#03DD5E] text-white rounded hover:from-green-700 hover:to-black">
            <a href="{{route('frontend.detail',$product->id)}}"> View Details</a>
           </button>
         </div>
@@ -233,7 +223,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center z-10">
           <!-- Left Section -->
           <div class="max-w-lg text-center sm:text-left">
-            <h1 class="text-2xl mt-4 md:text-4xl font-bold text-[#00FF71] tracking-tight">Testimonial</h1>
+            <h1 class="text-2xl mt-4 md:text-4xl font-bold text-[#03DD5E] tracking-tight">Testimonial</h1>
             <h2 class=" text-xl md:text-4xl font-bold text-black tracking-tight">
               What our <br class="hidden sm:block lg:hidden"> clients say about the Litho Power batteries
             </h2>
@@ -256,7 +246,7 @@
           </div>
 
           <!-- Right Section -->
-          <div class="mx-0 max-w-xl my-6 flex rounded-2xl bg-[#00FF71]">
+          <div class="mx-0 max-w-xl my-6 flex rounded-2xl bg-[#03DD5E]">
             <div class="swiper-container flex-col flex self-center">
               <div class="swiper-wrapper">
                 @foreach ($testimonials as $testimonial)
@@ -297,14 +287,14 @@
 
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="text-center">
-        <h2 class="text-3xl font-semibold text-[#00FF71]">{{ $mv->title }}</h2>
+        <h2 class="text-3xl font-semibold text-[#03DD5E]">{{ $mv->title }}</h2>
         <p class="mt-4 text-lg text-black">{{ $mv->sub_title }}</p>
       </div>
 
       <!-- Vision Section -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 md:mx-32">
         <div class="text-center md:text-left">
-          <h3 class="text-2xl font-semibold text-[#00FF71]">{{ $mv->vision }}</h3>
+          <h3 class="text-2xl font-semibold text-[#03DD5E]">{{ $mv->vision }}</h3>
           <p class="mt-4 text-lg text-black">
            {!! $mv->vision_description !!}
           </p>
@@ -313,7 +303,7 @@
 
         <!-- Mission Section -->
         <div class="text-center md:text-left">
-          <h3 class="text-2xl font-semibold text-[#00FF71]">{{ $mv->mission }}</h3>
+          <h3 class="text-2xl font-semibold text-[#03DD5E]">{{ $mv->mission }}</h3>
           <p class="mt-4 text-lg text-black">
       {!! $mv->mission_description !!}
         </p>
@@ -334,14 +324,14 @@
   <section id="contact" class="bg-white py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 text-white">
       <div class="text-center">
-        <h2 class="text-3xl font-semibold text-[#00FF71]">Get in Touch</h2>
+        <h2 class="text-3xl font-semibold text-[#03DD5E]">Get in Touch</h2>
         <p class="mt-4 text-lg text-black">Have questions or need more information? We are here to help!</p>
       </div>
 
       <!-- Contact Form -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
         <div class="flex flex-col justify-center">
-          <h3 class="text-2xl font-semibold text-[#00FF71]">Contact Us</h3>
+          <h3 class="text-2xl font-semibold text-[#03DD5E]">Contact Us</h3>
           <p class="mt-4 text-lg text-black">Fill out the form below to reach our team.</p>
           <form action="{{ route('appointment.store') }}" method="POST" class="mt-6 space-y-6">
             @csrf
@@ -372,7 +362,7 @@
 
             <!-- Submit Button -->
             <div>
-              <button type="submit" class="w-full border border-[#00FF71] hover:bg-[#00FF71] text-black hover:text-black font-semibold py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500">
+              <button type="submit" class="w-full border border-[#03DD5E] hover:bg-[#03DD5E] text-black hover:text-black font-semibold py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500">
                 Send Message
               </button>
             </div>
@@ -381,7 +371,7 @@
 
         <!-- Contact Information Section -->
         <div class="flex flex-col justify-center">
-          <h3 class="text-2xl font-semibold text-[#00FF71]">Our Office</h3>
+          <h3 class="text-2xl font-semibold text-[#03DD5E]">Our Office</h3>
           <p class="mt-4 text-lg text-black ">You can also reach us at the following address:</p>
           <div class="mt-6 text-lg text-black">
             <p><strong> Factory:</strong> B15 Rania, Kanpur
