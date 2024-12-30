@@ -32,7 +32,7 @@
                 <div class="mx-auto max-w-full px-4 py-32 lg:flex lg:h-screen lg:items-center">
                     <div class="mx-auto max-w-3xl text-center">
                         <!-- Header Title with Gradient -->
-                        <h1 class="text-yellow-500 text-3xl font-extrabold text-transparent sm:text-5xl">
+                        <h1 class="text-[#00FF71] text-3xl font-extrabold  sm:text-5xl">
                             {{ $banner->title }}
                             {{-- <span class="sm:block">Increase Conversion.</span> --}}
                         </h1>
@@ -61,15 +61,15 @@
     </div>
 
 {{-- ABOUT US:::::::: --}}
-<section id="about" class="py-16 bg-[#012D14]">
+<section id="about" class="py-16 bg-white">
     <div class="container mx-auto px-6 text-center">
         @foreach ($abouts->take(1) as $about)
 
 
-        <h2 class="text-4xl font-extrabold text-yellow-500 sm:text-5xl">
+        <h2 class="text-4xl font-extrabold text-[#00FF71] sm:text-5xl">
          {{ $about->title }}
         </h2>
-        <p class="mt-4 text-lg text-white max-w-3xl mx-auto">
+        <p class="mt-4 text-lg text-black max-w-3xl mx-auto">
 {!! $about->description !!}
         </p>
         @endforeach
@@ -78,10 +78,10 @@
             @foreach ($abouts->skip(1)->take(3) as $ab)
 
 
-            <div class="p-6 bg-[#012D14] text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="p-6 bg-[#012D14] text-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 {{-- <div class="flex justify-center"><img src="{{asset('storage/'.$ab->image)}}" alt="" class="h-24 w-24"></div> --}}
-                <h3 class="text-2xl font-semibold text-white">{{ $ab->title }}</h3>
-                <p class="mt-4 text-white">
+                <h3 class="text-2xl font-semibold text-[#00FF71]">{{ $ab->title }}</h3>
+                <p class="mt-4 text-black">
                   {!! $ab->description !!}
                 </p>
             </div>
@@ -108,7 +108,7 @@
         {{-- <h2 class="text-4xl font-extrabold text-green-900 sm:text-5xl">
             {{ $about->title }}
         </h2> --}}
-        <span class="mt-8 text-lg text-white max-w-3xl mx-auto " style="">
+        <span class="mt-8 text-lg text-black max-w-3xl mx-auto " style="">
             {!! $about->description !!}
         </span>
     @endforeach
@@ -124,10 +124,10 @@
 
 
    {{-- Explore Products --}}
-   <div id="product" class="bg-[#012D14] py-10">
+   <div id="product" class="bg-white py-10">
     <!-- Section Heading -->
     <div class="font-bold flex justify-center mb-8">
-      <h1 class="text-4xl text-yellow-500">Explore Battery</h1>
+      <h1 class="text-4xl text-[#00FF71]">Explore Battery</h1>
     </div>
 
     <!-- Cards Grid -->
@@ -142,11 +142,11 @@
           class="w-full h-48 object-cover"
         />
         <div class="p-6">
-          <h1 class="text-xl font-bold text-yellow-500">{{ $product->title }}</h1>
+          <h1 class="text-xl font-bold text-[#00FF71]">{{ $product->title }}</h1>
           <p class="text-[#012D14] mt-2">
            {{$product->sub_title}}
           </p>
-          <button class="mt-4 px-4 py-2 bg-[#012D14] text-white rounded hover:from-green-700 hover:to-black">
+          <button class="mt-4 px-4 py-2 bg-[#00FF71] text-white rounded hover:from-green-700 hover:to-black">
            <a href="{{route('frontend.detail',$product->id)}}"> View Details</a>
           </button>
         </div>
@@ -226,15 +226,15 @@
 <!-- component -->
 
 
-<div id="testimonial" class="bg-no-repeat bg-cover bg-center relative h-110" style="background-image: url(https://t3.ftcdn.net/jpg/11/37/40/66/240_F_1137406643_OvLrCrhqvxD4ZIiWNcM6eyw7ucJNAj7Q.jpg);">
- <div class="absolute bg-[#012D14] opacity-75 inset-0 z-0"></div>
+<div id="testimonial" class="bg-no-repeat bg-cover bg-center relative h-110" style="background-image: url();">
+ <div class="absolute bg-white opacity-75 inset-0 z-0"></div>
 <div>
     <div class="min-h-100 flex justify-center md:mx-32">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center z-10">
           <!-- Left Section -->
           <div class="max-w-lg text-center sm:text-left">
-            <h1 class="text-2xl mt-4 md:text-4xl font-bold text-yellow-500 tracking-tight">Testimonial</h1>
-            <h2 class=" text-xl md:text-4xl font-bold text-gray-100 tracking-tight">
+            <h1 class="text-2xl mt-4 md:text-4xl font-bold text-[#00FF71] tracking-tight">Testimonial</h1>
+            <h2 class=" text-xl md:text-4xl font-bold text-black tracking-tight">
               What our <br class="hidden sm:block lg:hidden"> clients say about the Litho Power batteries
             </h2>
             {{-- <p class="mt-4 text-gray-300">
@@ -256,7 +256,7 @@
           </div>
 
           <!-- Right Section -->
-          <div class="mx-0 max-w-xl my-6 flex rounded-2xl bg-[#012D14]">
+          <div class="mx-0 max-w-xl my-6 flex rounded-2xl bg-[#00FF71]">
             <div class="swiper-container flex-col flex self-center">
               <div class="swiper-wrapper">
                 @foreach ($testimonials as $testimonial)
@@ -269,7 +269,7 @@
                       <div class="rounded-t-2xl absolute bg-gradient-to-t from-gray-800 opacity-75 inset-0 z-0"></div>
                     </div>
                     <div class="relative m-5 p-5">
-                      <p class="text-gray-100 text-xl px-5">
+                      <p class="text-black text-xl px-5">
                        {{ $testimonial->msg }}
                       </p>
                     </div>
@@ -291,21 +291,21 @@
 
 
 
-<section class="bg-[#012D14] py-16">
+<section class="bg-white py-16">
     @foreach ($missionViosions as $mv)
 
 
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="text-center">
-        <h2 class="text-3xl font-semibold text-gray-900">{{ $mv->title }}</h2>
-        <p class="mt-4 text-lg text-gray-600">{{ $mv->sub_title }}</p>
+        <h2 class="text-3xl font-semibold text-[#00FF71]">{{ $mv->title }}</h2>
+        <p class="mt-4 text-lg text-black">{{ $mv->sub_title }}</p>
       </div>
 
       <!-- Vision Section -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 md:mx-32">
         <div class="text-center md:text-left">
-          <h3 class="text-2xl font-semibold text-yellow-500">{{ $mv->vision }}</h3>
-          <p class="mt-4 text-lg text-white">
+          <h3 class="text-2xl font-semibold text-[#00FF71]">{{ $mv->vision }}</h3>
+          <p class="mt-4 text-lg text-black">
            {!! $mv->vision_description !!}
           </p>
 
@@ -313,8 +313,8 @@
 
         <!-- Mission Section -->
         <div class="text-center md:text-left">
-          <h3 class="text-2xl font-semibold text-yellow-500">{{ $mv->mission }}</h3>
-          <p class="mt-4 text-lg text-white">
+          <h3 class="text-2xl font-semibold text-[#00FF71]">{{ $mv->mission }}</h3>
+          <p class="mt-4 text-lg text-black">
       {!! $mv->mission_description !!}
         </p>
           {{-- <ul class="mt-4 list-disc pl-6 text-gray-700 space-y-2">
@@ -331,48 +331,48 @@
   </section>
 
 
-  <section id="contact" class="bg-[#012D14] py-16">
+  <section id="contact" class="bg-white py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 text-white">
       <div class="text-center">
-        <h2 class="text-3xl font-semibold text-yellow-500">Get in Touch</h2>
-        <p class="mt-4 text-lg">Have questions or need more information? We are here to help!</p>
+        <h2 class="text-3xl font-semibold text-[#00FF71]">Get in Touch</h2>
+        <p class="mt-4 text-lg text-black">Have questions or need more information? We are here to help!</p>
       </div>
 
       <!-- Contact Form -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
         <div class="flex flex-col justify-center">
-          <h3 class="text-2xl font-semibold text-yellow-500">Contact Us</h3>
-          <p class="mt-4 text-lg">Fill out the form below to reach our team.</p>
+          <h3 class="text-2xl font-semibold text-[#00FF71]">Contact Us</h3>
+          <p class="mt-4 text-lg text-black">Fill out the form below to reach our team.</p>
           <form action="{{ route('appointment.store') }}" method="POST" class="mt-6 space-y-6">
             @csrf
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <!-- Name Field -->
               <div>
-                <label for="name" class="block text-sm font-medium">Full Name</label>
-                <input type="text" id="name" name="name" required class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-green-500" />
+                <label for="name" class="block text-sm font-medium text-black">Full Name</label>
+                <input type="text" id="name" name="name" required class="mt-2 w-full px-4 py-2 border border-black rounded-md text-black focus:outline-none focus:ring-2 focus:ring-gray-500" />
               </div>
 
               <!-- Email Field -->
               <div>
-                <label for="email" class="block text-sm font-medium">Email Address</label>
-                <input type="email" id="email" name="email" required class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-green-500" />
+                <label for="email" class="block text-sm font-medium text-black">Email Address</label>
+                <input type="email" id="email" name="email" required class="mt-2 w-full px-4 py-2 border border-black rounded-md text-black focus:outline-none focus:ring-2 focus:ring-gray-500" />
               </div>
 
 
             </div>
             <div>
-                <label for="number" class="block text-sm font-medium">number </label>
-                <input type="number" id="number" name="number" required class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-green-500" />
+                <label for="number" class="block text-sm font-medium text-black">number </label>
+                <input type="number" id="number" name="number" required class="mt-2 w-full px-4 py-2 border border-black rounded-md text-black focus:outline-none focus:ring-2 focus:ring-gray-500" />
               </div>
             <!-- Message Field -->
             <div>
-              <label for="message" class="block text-sm font-medium">Message</label>
-              <textarea id="message" name="msg" rows="4" required class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+              <label for="message" class="block text-sm font-medium text-black">Message</label>
+              <textarea id="message" name="msg" rows="4" required class="mt-2 w-full px-4 py-2 border border-black rounded-md text-black focus:outline-none focus:ring-2 focus:ring-gray-500"></textarea>
             </div>
 
             <!-- Submit Button -->
             <div>
-              <button type="submit" class="w-full border border-yellow-500  hover:bg-yellow-500 text-yellow-500 hover:text-green-900 font-semibold py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+              <button type="submit" class="w-full border border-[#00FF71] hover:bg-[#00FF71] text-black hover:text-black font-semibold py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500">
                 Send Message
               </button>
             </div>
@@ -381,9 +381,9 @@
 
         <!-- Contact Information Section -->
         <div class="flex flex-col justify-center">
-          <h3 class="text-2xl font-semibold">Our Office</h3>
-          <p class="mt-4 text-lg">You can also reach us at the following address:</p>
-          <div class="mt-6 text-lg">
+          <h3 class="text-2xl font-semibold text-[#00FF71]">Our Office</h3>
+          <p class="mt-4 text-lg text-black ">You can also reach us at the following address:</p>
+          <div class="mt-6 text-lg text-black">
             <p><strong>Address:</strong> 1234 E-Battery Lane, Green City, Earth</p>
             <p class="mt-2"><strong>Phone:</strong> (123) 456-7890</p>
             <p class="mt-2"><strong>Email:</strong> support@ebattery.com</p>
