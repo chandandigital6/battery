@@ -29,20 +29,20 @@
         <h1 class="text-3xl font-extrabold sm:text-5xl text-[#255D3A]">
           {{ $banner->title }}
         </h1>
-    
+
         <!-- Description -->
         <p class="text-gray-700 text-lg sm:text-xl max-w-xl mx-auto">
           {{ $banner->sub_title }}
         </p>
       </div>
     </div>
-    
+
 
     <!-- Banner Image -->
     <div>
-      <img 
-        src="{{ asset('storage/' . $banner->image) }}" 
-        alt="{{ $banner->title }}" 
+      <img
+        src="{{ asset('storage/' . $banner->image) }}"
+        alt="{{ $banner->title }}"
         class="w-full h-auto object-cover "
       >
     </div>
@@ -80,7 +80,7 @@
                   {!! $ab->description !!}
               </p>
           </div>
-          
+
             @endforeach
             <!-- Card 2 -->
             {{-- <div class="p-6 p-6 bg-gradient-to-r from-green-500 to-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -124,25 +124,30 @@
       <!-- Card 1 -->
 
       @forelse ($products as $product)
+      @php
+          // Convert the product_images string to an array
+          $images = explode(',', $product->product_images);
+      @endphp
       <article class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
-        <img
-          src="{{ asset('storage/'.$product->image) }}"
-          alt="E-rickshaw lead-acid battery"
-          class="w-full h-48 object-cover"
-        />
-        <div class="p-6">
-          <h1 class="text-xl font-bold text-[#255D3A]">{{ $product->title }}</h1>
-          <p class="text-[#012D14] mt-2">
-           {{$product->sub_title}}
-          </p>
-          <button class="mt-4 px-4 py-2 bg-[#255D3A] text-white rounded hover:from-green-700 hover:to-black">
-           <a href="{{route('frontend.detail',$product->id)}}"> View Details</a>
-          </button>
-        </div>
+          <img
+              src="{{ asset('storage/' . $images[0]) }}" {{-- Get the first image --}}
+              alt="{{ $product->title }}"
+              class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+              <h1 class="text-xl font-bold text-[#255D3A]">{{ $product->title }}</h1>
+              <p class="text-[#012D14] mt-2">
+                  {{ $product->sub_title }}
+              </p>
+              <button class="mt-4 px-4 py-2 bg-[#255D3A] text-white rounded hover:from-green-700 hover:to-black">
+                  <a href="{{ route('frontend.detail', $product->id) }}">View Details</a>
+              </button>
+          </div>
       </article>
-      @empty
-        <p>no data found</p>
-      @endforelse
+  @empty
+      <p>No data found</p>
+  @endforelse
+
 
 
       <!-- Card 2 -->
@@ -298,7 +303,7 @@
         <h2 class="text-5xl font-bold text-[#255D3A] mb-4"><strong>Get in Touch</strong></h2>
         <p class="mt-4 text-lg text-black">Have questions or need more information? We are here to help!</p>
       </div>
-  
+
       <!-- Contact Form -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 ">
         <div class="flex flex-col justify-center bg-[#255D3A] bg-opacity-20 backdrop-blur-lg rounded-lg shadow-lg p-8">
@@ -312,26 +317,26 @@
                 <label for="name" class="block text-sm font-medium text-black">Full Name</label>
                 <input type="text" id="name" name="name" required class="mt-2 w-full px-4 py-3 border border-[#255D3A] rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[#255D3A]" />
               </div>
-  
+
               <!-- Email Field -->
               <div>
                 <label for="email" class="block text-sm font-medium text-black">Email Address</label>
                 <input type="email" id="email" name="email" required class="mt-2 w-full px-4 py-3 border border-[#255D3A] rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[#255D3A]" />
               </div>
             </div>
-            
+
             <!-- Phone Number Field -->
             <div>
               <label for="number" class="block text-sm font-medium text-black">Phone Number</label>
               <input type="number" id="number" name="number" required class="mt-2 w-full px-4 py-3 border border-[#255D3A] rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[#255D3A]" />
             </div>
-  
+
             <!-- Message Field -->
             <div>
               <label for="message" class="block text-sm font-medium text-black">Message</label>
               <textarea id="message" name="msg" rows="4" required class="mt-2 w-full px-4 py-3 border border-[#255D3A] rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[#255D3A]"></textarea>
             </div>
-  
+
             <!-- Submit Button -->
             <div>
               <button type="submit" class="w-full bg-[#255D3A] text-white font-semibold py-3 px-4 rounded-md hover:bg-[#272727] focus:outline-none focus:ring-2 focus:ring-[#255D3A] transition duration-300">
@@ -340,7 +345,7 @@
             </div>
           </form>
         </div>
-  
+
         <!-- Contact Information Section -->
         <div class="flex flex-col justify-center bg-[#255D3A]  bg-opacity-20 backdrop-blur-lg rounded-lg shadow-lg p-8">
           <h3 class="text-3xl font-semibold text-[#255D3A] mb-4"><strong>Our Office</strong></h3>
@@ -356,8 +361,8 @@
       </div>
     </div>
 </section>
-  
-  
+
+
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
