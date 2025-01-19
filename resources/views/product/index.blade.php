@@ -56,6 +56,7 @@
                                         <th>Price</th>
                                         <th>Category Name</th>
                                         <th>Image</th>
+                                        <th>ProductImage</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -73,6 +74,14 @@
                                             <td>{{ $product->category_name }}</td>
                                             <td>
                                                 <img src="{{ asset('storage/'.$product->image) }}" alt="{{ $product->title }}" style="max-width: 100px;">
+                                            </td>
+
+                                            <td>
+                                                @if($product->product_images)
+                                                    @foreach(explode(',', $product->product_images) as $image)
+                                                        <img src="{{ asset('storage/' . $image) }}" class="img-thumbnail" style="width: 100px; height: 100px;">
+                                                    @endforeach
+                                                @endif
                                             </td>
                                             <td>
 

@@ -3,25 +3,42 @@
 <div class="bg-gray-100">
     <div class="container mx-auto px-4 py-8">
       <div class="flex flex-wrap -mx-4">
-        <!-- Product Images -->
-        <div class="w-full md:w-1/2 px-4 mb-8">
-          <img src="{{asset('storage/'.$product->image)}}" alt="Product"
-                      class="w-full h-auto rounded-lg shadow-md mb-4" id="mainImage">
-          {{-- <div class="flex gap-4 py-4 justify-center overflow-x-auto">
-            <img src="{{asset('image/products.png')}}" alt="Thumbnail 1"
-                          class="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
-                          onclick="changeImage(this.src)">
-            <img src="{{asset('image/e-rickshaw-battery.png')}}" alt="Thumbnail 2"
-                          class="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
-                          onclick="changeImage(this.src)">
-            <img src="{{asset('image/QUALITY.png')}}" alt="Thumbnail 3"
-                          class="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
-                          onclick="changeImage(this.src)">
-            <img src="{{asset('image/products.png')}}" alt="Thumbnail 4"
-                          class="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
-                          onclick="changeImage(this.src)">
-          </div> --}}
-        </div>
+      <!-- Product Images -->
+<div class="w-full md:w-1/2 px-4 mb-8">
+    @php
+        // Convert the product_images field into an array
+        $images = !empty($product->product_images) ? explode(',', $product->product_images) : [];
+    @endphp
+
+    <!-- Main Product Image -->
+    <img src="{{ count($images) > 0 ? asset('storage/' . $images[0]) : asset('image/default-product.png') }}"
+         alt="{{ $product->title ?? 'Default Product' }}"
+         class="w-full h-auto rounded-lg shadow-md mb-4 object-cover"
+         id="mainImage">
+
+    <!-- Thumbnails -->
+    <div class="flex gap-4 py-4 justify-center overflow-x-auto">
+        @if (!empty($images))
+            @foreach ($images as $image)
+                <img src="{{ asset('storage/' . $image) }}"
+                     alt="{{ $product->title ?? 'Product Thumbnail' }}"
+                     class="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
+                     onclick="changeImage('{{ asset('storage/' . $image) }}')">
+            @endforeach
+        @else
+            <span class="text-gray-500">No images available</span>
+        @endif
+    </div>
+</div>
+
+<script>
+    // JavaScript to update the main image when a thumbnail is clicked
+    function changeImage(src) {
+        document.getElementById('mainImage').src = src;
+    }
+</script>
+
+
 
         <!-- Product Details -->
         <div class="w-full md:w-1/2 px-4">
@@ -35,18 +52,25 @@
 
           <!-- Short Description -->
           <div class="mb-6">
-            <h3 class="text-lg font-semibold mb-2">ShortDescription:</h3>
+            <h3 class="text-lg font-semibold mb-2">Short Description:</h3>
             <p class="text-gray-700">{!! $product->short_description !!}</p>
+
         </div>
 
+
         <div class="mb-6">
-            <h3 class="text-lg font-semibold mb-2">LongDescription:</h3>
+            <h3 class="text-lg font-semibold mb-2">Product Details:</h3>
             <p class="text-gray-700">{!! $product->long_description !!}</p>
+
+            <img src="{{ asset('storage/' . $product->image) }}"
+            alt="Product"
+            class="w-full h-auto rounded-lg shadow-md mb-4"
+            id="mainImage">
         </div>
 
           <!-- Long Description -->
 
-          
+
           <!-- Category & Types -->
           <div class="mb-6">
               <h3 class="text-lg font-semibold mb-2">Category:</h3>

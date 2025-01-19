@@ -13,23 +13,23 @@ class ProductController extends Controller
 {
 
     public function showQr($id)
-{
-    $product = Product::findOrFail($id);
+    {
+        $product = Product::findOrFail($id);
 
-    // Prepare product details as a string
-    $productDetails = "Product Title: {$product->title}\n"
-        . "Subtitle: {$product->sub_title}\n"
-        . "SKU: {$product->sku_number}\n"
-        . "Price: {$product->price}\n"
-        . "Quantity: {$product->qty}\n"
-        . "Description: {$product->short_description}";
+        // Prepare product details as a string
+        $productDetails = "Product Title: {$product->title}\n"
+            . "Subtitle: {$product->sub_title}\n"
+            . "SKU: {$product->sku_number}\n"
+            . "Price: {$product->price}\n"
+            . "Quantity: {$product->qty}\n"
+            . "Description: {$product->short_description}";
 
-    // Generate and save the QR code as an image
-    $imagePath = "qr-codes/product-123.png";
-    Storage::disk('public')->put($imagePath, QrCode::format('png')->size(200)->generate('Product details go here'));
+        // Generate and save the QR code as an image
+        $imagePath = "qr-codes/product-123.png";
+        Storage::disk('public')->put($imagePath, QrCode::format('png')->size(200)->generate('Product details go here'));
 
-    return back()->with('success', 'QR Code generated successfully!');
-}
+        return back()->with('success', 'QR Code generated successfully!');
+    }
     public function index(Request $request)
     {
         $keyword = $request->input('keyword');
@@ -49,19 +49,29 @@ class ProductController extends Controller
     }
 
     public function store(ProductRequest $request)
-    {
-        //        dd($request);
+{
+    $validated = $request->validated();
 
-        $validated = $request->validated();
-
-        // Handle image upload
-        if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('products', 'public');
-        }
-        Product::create($validated);
-
-        return redirect()->route('product.index')->with('success', 'product  created successfully.');
+    // Handle single image upload
+    if ($request->hasFile('image')) {
+        $validated['image'] = $request->file('image')->store('products', 'public');
     }
+
+    // Handle multiple product images upload
+    $imagePaths = [];
+    if ($request->hasFile('product_images')) {
+        foreach ($request->file('product_images') as $image) {
+            $imagePaths[] = $image->store('products', 'public');
+        }
+    }
+    $validated['product_images'] = implode(',', $imagePaths);
+
+    // Create the product
+    Product::create($validated);
+
+    return redirect()->route('product.index')->with('success', 'Product created successfully.');
+}
+
 
     public function edit(Product $product)
     {
@@ -69,22 +79,48 @@ class ProductController extends Controller
         return view('product.create', compact('product'));
     }
 
-    public function update(Product $product, ProductRequest $request)
-    {
-        $productData = $request->all();
+    public function update(ProductRequest $request, Product $product)
+{
+    $validated = $request->validated();
 
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('public/product');
-            $productData['image'] = str_replace('public/', '', $imagePath);
+    // Handle single image update
+    if ($request->hasFile(key: 'image')) {
+        // Delete old image if it exists
+        if ($product->image) {
+            Storage::disk('public')->delete($product->image);
         }
 
-        $product->update($productData);
-
-        return redirect()->route('product.index')->with('success', 'product item successfully updated');
+        // Store the new image
+        $validated['image'] = $request->file('image')->store('products', 'public');
     }
 
+    // Handle multiple product images update
+    $imagePaths = $product->product_images ? explode(',', $product->product_images) : []; // Existing images
 
-    public function delete( $product)
+    if ($request->hasFile('product_images')) {
+        // Delete old images if any
+        foreach ($imagePaths as $oldImage) {
+            Storage::disk('public')->delete($oldImage);
+        }
+
+        // Store new images
+        $imagePaths = [];
+        foreach ($request->file('product_images') as $image) {
+            $imagePaths[] = $image->store('products', 'public');
+        }
+    }
+
+    $validated['product_images'] = implode(',', $imagePaths);
+
+    // Update the product
+    $product->update($validated);
+
+    return redirect()->route('product.index')->with('success', 'Product updated successfully.');
+}
+
+
+
+    public function delete($product)
     {
         $product = Product::findOrFail($product);
 

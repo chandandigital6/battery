@@ -110,6 +110,52 @@
         @endif
     </div>
 
+    <div class="mb-3">
+        <label for="product_images" class="form-label">Product Images</label>
+        <input type="file" id="product_images" name="product_images[]" class="form-control @error('product_images.*') is-invalid @enderror" multiple onchange="previewImages(event)">
+
+        <!-- Preview selected product_images -->
+        <div id="product_images-preview" class="mt-3 d-flex flex-wrap"></div>
+
+        <!-- Show existing product_images if available -->
+        @if(isset($product) && $product->product_images)
+            <div class="mt-3 d-flex flex-wrap">
+                @foreach(explode(',', $product->product_images) as $product_image)
+                    <div class="me-2 mb-2">
+                        <img src="{{ asset('storage/' . $product_image) }}" class="img-thumbnail" style="width: 100px; height: 100px;">
+                    </div>
+                @endforeach
+            </div>
+        @endif
+
+        @error('product_images.*')
+            <div class="invalid-feedback">{{ $message }}</div>
+        @enderror
+    </div>
+
+    <script>
+    function previewImages(event) {
+        const files = event.target.files;
+        const previewContainer = document.getElementById('product_images-preview');
+        previewContainer.innerHTML = ''; // Clear existing previews
+
+        Array.from(files).forEach(file => {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.classList.add('img-thumbnail');
+                img.style.width = '100px';
+                img.style.height = '100px';
+                img.style.marginRight = '10px';
+                previewContainer.appendChild(img);
+            };
+            reader.readAsDataURL(file);
+        });
+    }
+    </script>
+
+
     <button type="submit" class="btn btn-primary">{{ isset($product) ? 'Update' : 'Create' }}</button>
 </form>
 </div>
