@@ -111,6 +111,44 @@
     </div>
 </section>
 
+<section class="bg-white py-16">
+    @foreach ($missionViosions as $mv)
+
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-semibold text-[#255D3A]">{{ $mv->title }}</h2>
+        <p class="mt-4 text-lg text-black">{{ $mv->sub_title }}</p>
+      </div>
+
+      <!-- Vision Section -->
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 md:mx-32">
+        <div class="text-center md:text-left">
+          <h3 class="text-2xl font-semibold text-[#255D3A]">{{ $mv->vision }}</h3>
+          <p class="mt-4 text-lg text-black">
+           {!! $mv->vision_description !!}
+          </p>
+
+        </div>
+
+        <!-- Mission Section -->
+        <div class="text-center md:text-left">
+          <h3 class="text-2xl font-semibold text-[#255D3A]">{{ $mv->mission }}</h3>
+          <p class="mt-4 text-lg text-black">
+      {!! $mv->mission_description !!}
+        </p>
+          {{-- <ul class="mt-4 list-disc pl-6 text-gray-700 space-y-2">
+            <li><strong>Innovation</strong>: Continuously pushing the boundaries of e-battery technology to enhance energy efficiency, longevity, and overall performance.</li>
+            <li><strong>Sustainability</strong>: Ensuring our products and processes minimize environmental impact, promoting a cleaner, more sustainable planet.</li>
+            <li><strong>Quality</strong>: Delivering reliable, durable, and safe e-batteries that meet the highest standards of excellence for our customers.</li>
+            <li><strong>Customer Commitment</strong>: Offering personalized, efficient solutions that cater to both consumer and industrial needs, with exceptional customer service at every step.</li>
+          </ul> --}}
+        </div>
+      </div>
+    </div>
+
+    @endforeach
+  </section>
 
    {{-- Explore Products --}}
    <div id="product" class="bg-white py-10">
@@ -258,44 +296,6 @@
 
 {{-- contact us --}}
 
-<section class="bg-white py-16">
-    @foreach ($missionViosions as $mv)
-
-
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="text-center">
-        <h2 class="text-3xl font-semibold text-[#255D3A]">{{ $mv->title }}</h2>
-        <p class="mt-4 text-lg text-black">{{ $mv->sub_title }}</p>
-      </div>
-
-      <!-- Vision Section -->
-      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 md:mx-32">
-        <div class="text-center md:text-left">
-          <h3 class="text-2xl font-semibold text-[#255D3A]">{{ $mv->vision }}</h3>
-          <p class="mt-4 text-lg text-black">
-           {!! $mv->vision_description !!}
-          </p>
-
-        </div>
-
-        <!-- Mission Section -->
-        <div class="text-center md:text-left">
-          <h3 class="text-2xl font-semibold text-[#255D3A]">{{ $mv->mission }}</h3>
-          <p class="mt-4 text-lg text-black">
-      {!! $mv->mission_description !!}
-        </p>
-          {{-- <ul class="mt-4 list-disc pl-6 text-gray-700 space-y-2">
-            <li><strong>Innovation</strong>: Continuously pushing the boundaries of e-battery technology to enhance energy efficiency, longevity, and overall performance.</li>
-            <li><strong>Sustainability</strong>: Ensuring our products and processes minimize environmental impact, promoting a cleaner, more sustainable planet.</li>
-            <li><strong>Quality</strong>: Delivering reliable, durable, and safe e-batteries that meet the highest standards of excellence for our customers.</li>
-            <li><strong>Customer Commitment</strong>: Offering personalized, efficient solutions that cater to both consumer and industrial needs, with exceptional customer service at every step.</li>
-          </ul> --}}
-        </div>
-      </div>
-    </div>
-
-    @endforeach
-  </section>
 
   <section id="contact" class="bg-white py-16 ">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 text-white">
