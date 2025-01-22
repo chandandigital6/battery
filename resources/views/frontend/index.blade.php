@@ -26,29 +26,32 @@
     <div class="flex items-center justify-center bg-green-200 h-full w-full px-4 py-8">
       <div class="space-y-4 text-center">
         <!-- Header Title -->
-        <h1 class="text-3xl font-extrabold sm:text-5xl text-[#255D3A]">
+        <h1 class="text-3xl md:text-5xl font-extrabold sm:text-5xl text-[#255D3A]">
           {{ $banner->title }}
         </h1>
-
+    
         <!-- Description -->
         <p class="text-gray-700 text-lg sm:text-xl max-w-xl mx-auto">
           {{ $banner->sub_title }}
         </p>
       </div>
     </div>
-
+    
 
     <!-- Banner Image -->
     <div>
-      <img
-        src="{{ asset('storage/' . $banner->image) }}"
-        alt="{{ $banner->title }}"
+      <img 
+        src="{{ asset('storage/' . $banner->image) }}" 
+        alt="{{ $banner->title }}" 
         class="w-full h-auto object-cover "
       >
     </div>
   </div>
   @endforeach
 </div>
+
+
+
 
 {{-- ABOUT US:::::::: --}}
 <section id="about" class="py-16 bg-white">
@@ -80,7 +83,7 @@
                   {!! $ab->description !!}
               </p>
           </div>
-
+          
             @endforeach
             <!-- Card 2 -->
             {{-- <div class="p-6 p-6 bg-gradient-to-r from-green-500 to-black rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -111,44 +114,38 @@
     </div>
 </section>
 
-<section class="bg-white py-16">
-    @foreach ($missionViosions as $mv)
 
-
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="text-center">
-        <h2 class="text-3xl font-semibold text-[#255D3A]">{{ $mv->title }}</h2>
-        <p class="mt-4 text-lg text-black">{{ $mv->sub_title }}</p>
-      </div>
-
-      <!-- Vision Section -->
-      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 md:mx-32">
-        <div class="text-center md:text-left">
-          <h3 class="text-2xl font-semibold text-[#255D3A]">{{ $mv->vision }}</h3>
-          <p class="mt-4 text-lg text-black">
-           {!! $mv->vision_description !!}
-          </p>
-
-        </div>
-
-        <!-- Mission Section -->
-        <div class="text-center md:text-left">
-          <h3 class="text-2xl font-semibold text-[#255D3A]">{{ $mv->mission }}</h3>
-          <p class="mt-4 text-lg text-black">
-      {!! $mv->mission_description !!}
-        </p>
-          {{-- <ul class="mt-4 list-disc pl-6 text-gray-700 space-y-2">
-            <li><strong>Innovation</strong>: Continuously pushing the boundaries of e-battery technology to enhance energy efficiency, longevity, and overall performance.</li>
-            <li><strong>Sustainability</strong>: Ensuring our products and processes minimize environmental impact, promoting a cleaner, more sustainable planet.</li>
-            <li><strong>Quality</strong>: Delivering reliable, durable, and safe e-batteries that meet the highest standards of excellence for our customers.</li>
-            <li><strong>Customer Commitment</strong>: Offering personalized, efficient solutions that cater to both consumer and industrial needs, with exceptional customer service at every step.</li>
-          </ul> --}}
-        </div>
-      </div>
+{{-- new mission and vision --}}
+<div class="container mx-auto px-4 py-16">
+  <h1 class="text-4xl font-extrabold text-center mb-6 text-[#255D3A]">Our Mission & Vision</h1>
+  <div class="flex flex-col lg:flex-row items-center gap-6">
+    <!-- Image Section -->
+    <div class="lg:w-2/3 w-full">
+      <img
+        src="{{asset('asset/dist/img/avatar3.png')}}"
+        alt="Litho Powerr"
+        class="w-full max-w-sm mx-auto rounded-lg shadow-lg"
+      />
     </div>
+    <!-- Text Section -->
+    <div class="lg:w-2/3 w-full">
+      <p class="text-gray-700 leading-relaxed text-justify px-8">
+        At Litho Powerr, we take great pride in our state-of-the-art
+        manufacturing processes, which combine the latest in battery technology
+        with rigorous quality control measures. Every product undergoes
+        comprehensive testing to meet global standards for performance and
+        safety. Our commitment to sustainability, combined with a strong
+        emphasis on innovation, allows us to provide eco-friendly power
+        solutions that not only meet today’s needs but are also designed for
+        the future. Whether you're seeking a reliable inverter battery, a
+        cutting-edge electric vehicle battery, or a high-performance e-rickshaw
+        power system, Litho Power is your trusted partner in powering a
+        cleaner, more efficient future.
+      </p>
+    </div>
+  </div>
+</div>
 
-    @endforeach
-  </section>
 
    {{-- Explore Products --}}
    <div id="product" class="bg-white py-10">
@@ -162,30 +159,25 @@
       <!-- Card 1 -->
 
       @forelse ($products as $product)
-      @php
-          // Convert the product_images string to an array
-          $images = explode(',', $product->product_images);
-      @endphp
       <article class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
-          <img
-              src="{{ asset('storage/' . $images[0]) }}" {{-- Get the first image --}}
-              alt="{{ $product->title }}"
-              class="w-full h-48 object-cover"
-          />
-          <div class="p-6">
-              <h1 class="text-xl font-bold text-[#255D3A]">{{ $product->title }}</h1>
-              <p class="text-[#012D14] mt-2">
-                  {{ $product->sub_title }}
-              </p>
-              <button class="mt-4 px-4 py-2 bg-[#255D3A] text-white rounded hover:from-green-700 hover:to-black">
-                  <a href="{{ route('frontend.detail', $product->id) }}">View Details</a>
-              </button>
-          </div>
+        <img
+          src="{{ asset('storage/'.$product->image) }}"
+          alt="E-rickshaw lead-acid battery"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-6">
+          <h1 class="text-xl font-bold text-[#255D3A]">{{ $product->title }}</h1>
+          <p class="text-[#012D14] mt-2">
+           {{$product->sub_title}}
+          </p>
+          <button class="mt-4 px-4 py-2 bg-[#255D3A] text-white rounded hover:from-green-700 hover:to-black">
+           <a href="{{route('frontend.detail',$product->id)}}"> View Details</a>
+          </button>
+        </div>
       </article>
-  @empty
-      <p>No data found</p>
-  @endforelse
-
+      @empty
+        <p>no data found</p>
+      @endforelse
 
 
       <!-- Card 2 -->
@@ -270,11 +262,11 @@
                 <div class="swiper-slide">
                   <blockquote class="text-left">
                     <div class="relative">
-                      <img src="{{asset('storage/'.$testimonial->image)}}" alt="aji" class="object-cover w-full h-80 mx-auto rounded-t-2xl"/>
+                      <img src="{{asset('storage/'.$testimonial->image)}}" alt="aji" class="object-cover w-full h-[500px] mx-auto rounded-t-2xl"/>
                       <div class="rounded-t-2xl absolute bg-gradient-to-t from-gray-800 opacity-75 inset-0 z-0"></div>
                     </div>
-                    <div class="relative m-5 p-5">
-                      <p class="text-white text-xl px-5">
+                    <div class="relative m-3 p-3">
+                      <p class="text-white text-xl px-3">
                        {{ $testimonial->msg }}
                       </p>
                     </div>
@@ -296,6 +288,44 @@
 
 {{-- contact us --}}
 
+<section class="bg-white py-16">
+    @foreach ($missionViosions as $mv)
+
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-semibold text-[#255D3A]">{{ $mv->title }}</h2>
+        <p class="mt-4 text-lg text-black">{{ $mv->sub_title }}</p>
+      </div>
+
+      <!-- Vision Section -->
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 md:mx-32">
+        <div class="text-center md:text-left">
+          <h3 class="text-2xl font-semibold text-[#255D3A]">{{ $mv->vision }}</h3>
+          <p class="mt-4 text-lg text-black">
+           {!! $mv->vision_description !!}
+          </p>
+
+        </div>
+
+        <!-- Mission Section -->
+        <div class="text-center md:text-left">
+          <h3 class="text-2xl font-semibold text-[#255D3A]">{{ $mv->mission }}</h3>
+          <p class="mt-4 text-lg text-black">
+      {!! $mv->mission_description !!}
+        </p>
+          {{-- <ul class="mt-4 list-disc pl-6 text-gray-700 space-y-2">
+            <li><strong>Innovation</strong>: Continuously pushing the boundaries of e-battery technology to enhance energy efficiency, longevity, and overall performance.</li>
+            <li><strong>Sustainability</strong>: Ensuring our products and processes minimize environmental impact, promoting a cleaner, more sustainable planet.</li>
+            <li><strong>Quality</strong>: Delivering reliable, durable, and safe e-batteries that meet the highest standards of excellence for our customers.</li>
+            <li><strong>Customer Commitment</strong>: Offering personalized, efficient solutions that cater to both consumer and industrial needs, with exceptional customer service at every step.</li>
+          </ul> --}}
+        </div>
+      </div>
+    </div>
+
+    @endforeach
+  </section>
 
   <section id="contact" class="bg-white py-16 ">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 text-white">
@@ -303,7 +333,7 @@
         <h2 class="text-5xl font-bold text-[#255D3A] mb-4"><strong>Get in Touch</strong></h2>
         <p class="mt-4 text-lg text-black">Have questions or need more information? We are here to help!</p>
       </div>
-
+  
       <!-- Contact Form -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 ">
         <div class="flex flex-col justify-center bg-[#255D3A] bg-opacity-20 backdrop-blur-lg rounded-lg shadow-lg p-8">
@@ -317,26 +347,26 @@
                 <label for="name" class="block text-sm font-medium text-black">Full Name</label>
                 <input type="text" id="name" name="name" required class="mt-2 w-full px-4 py-3 border border-[#255D3A] rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[#255D3A]" />
               </div>
-
+  
               <!-- Email Field -->
               <div>
                 <label for="email" class="block text-sm font-medium text-black">Email Address</label>
                 <input type="email" id="email" name="email" required class="mt-2 w-full px-4 py-3 border border-[#255D3A] rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[#255D3A]" />
               </div>
             </div>
-
+            
             <!-- Phone Number Field -->
             <div>
               <label for="number" class="block text-sm font-medium text-black">Phone Number</label>
               <input type="number" id="number" name="number" required class="mt-2 w-full px-4 py-3 border border-[#255D3A] rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[#255D3A]" />
             </div>
-
+  
             <!-- Message Field -->
             <div>
               <label for="message" class="block text-sm font-medium text-black">Message</label>
               <textarea id="message" name="msg" rows="4" required class="mt-2 w-full px-4 py-3 border border-[#255D3A] rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[#255D3A]"></textarea>
             </div>
-
+  
             <!-- Submit Button -->
             <div>
               <button type="submit" class="w-full bg-[#255D3A] text-white font-semibold py-3 px-4 rounded-md hover:bg-[#272727] focus:outline-none focus:ring-2 focus:ring-[#255D3A] transition duration-300">
@@ -345,7 +375,7 @@
             </div>
           </form>
         </div>
-
+  
         <!-- Contact Information Section -->
         <div class="flex flex-col justify-center bg-[#255D3A]  bg-opacity-20 backdrop-blur-lg rounded-lg shadow-lg p-8">
           <h3 class="text-3xl font-semibold text-[#255D3A] mb-4"><strong>Our Office</strong></h3>
@@ -361,8 +391,8 @@
       </div>
     </div>
 </section>
-
-
+  
+  
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
