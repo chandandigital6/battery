@@ -151,7 +151,7 @@
    <div id="product" class="bg-white py-10">
     <!-- Section Heading -->
     <div class="font-bold flex justify-center mb-8">
-      <h1 class="text-4xl text-[#255D3A]">Explore Battery</h1>
+      <h1 class="text-3xl md:text-5xl font-extrabold sm:text-5xl text-[#255D3A]">Explore Battery</h1>
     </div>
 
     <!-- Cards Grid -->
