@@ -25,9 +25,13 @@
     <!-- Text Content -->
     <div class="flex items-center justify-center bg-green-200 h-full w-full px-4 py-8">
       <div class="space-y-4 text-center">
+     
         <!-- Header Title -->
-        <h1 class="text-3xl md:text-5xl font-extrabold sm:text-5xl text-[#255D3A]">
+        <h1 class="text-3xl md:text-5xl font-extrabold sm:text-5xl text-[#255D3A] relative">
           {{ $banner->title }}
+          <sup class="absolute -top-4 right-0 border border-black rounded-full text-sm px-1 py-1 text-[#255D3A]">
+          TM
+          </sup>
         </h1>
     
         <!-- Description -->
