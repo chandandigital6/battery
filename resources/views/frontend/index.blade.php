@@ -190,17 +190,17 @@
     </div>
 
     <!-- Cards Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 md:px-16">
+    <div class="px-4 md:px-6 w-full">
         <!-- Card 1 -->
 
         @forelse ($productScooter as $product)
             @php
-                // Convert the product_images string to an array
+                
                 $images = explode(',', $product->product_images);
             @endphp
             <article
-                class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
-                <img src="{{ asset('storage/' . $images[0]) }}" {{-- Get the first image --}} alt="{{ $product->title }}"
+                class="bg-white grid grid-cols-1 md:grid-cols-2 gap-2 rounded-lg overflow-hidden ">
+                <img src="{{ asset('storage/' . $images[0]) }}" alt="{{ $product->title }}"
                     class="w-full h-48 object-cover" />
                 <div class="p-6">
                     <h1 class="text-xl font-bold text-[#255D3A]">{{ $product->title }}</h1>
