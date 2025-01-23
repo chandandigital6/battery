@@ -13,7 +13,7 @@
       <!-- Mobile Toggle Button -->
       <button
           id="mobile-menu-button"
-          class="md:hidden text-gray-50 hover:text-green-50 transition-colors duration-300 focus:outline-none z-20"
+          class="md:hidden text-gray-500 hover:text-green-500 transition-colors duration-300 focus:outline-none z-20"
           onclick="toggleMenu()"
       >
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -24,9 +24,9 @@
       <!-- Navigation Links -->
       <div
           id="mobile-menu"
-          class="invisible md:visible fixed inset-0 bg-black-400 md:static md:bg-transparent z-40"
+          class="invisible md:visible fixed inset-0 bg-white md:static md:bg-transparent z-40"
       >
-          <div class="flex flex-col h-full">
+          <div class="flex flex-col h-full ">
               <!-- Mobile Close Button -->
               <button
                   id="mobile-menu-close"
