@@ -18,8 +18,8 @@ class HomeController extends Controller
         // dd($abouts);
         $testimonials=Testimonial::all();
         $missionViosions=MissionVision::all();
-        $products=Product::where('category_name','battery');
-        $productScooter=Product::where('category_name','electric scooter');
+        $products=Product::where('category_name','battery')->get();
+        $productScooter=Product::where('category_name','electric scooter')->get();
         return view('frontend.index',compact('banners','abouts','testimonials','missionViosions','products','productScooter'));
     }
 
