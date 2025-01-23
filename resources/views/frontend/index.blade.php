@@ -292,7 +292,7 @@
 
 {{-- contact us --}}
 
-<section class="bg-white py-16">
+{{-- <section class="bg-white py-16">
     @foreach ($missionViosions as $mv)
 
 
@@ -324,12 +324,12 @@
             <li><strong>Quality</strong>: Delivering reliable, durable, and safe e-batteries that meet the highest standards of excellence for our customers.</li>
             <li><strong>Customer Commitment</strong>: Offering personalized, efficient solutions that cater to both consumer and industrial needs, with exceptional customer service at every step.</li>
           </ul> --}}
-        </div>
+        {{-- </div>
       </div>
     </div>
 
     @endforeach
-  </section>
+  </section> --}} --}}
 
   <section id="contact" class="bg-white py-16 ">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 text-white">
