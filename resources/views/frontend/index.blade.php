@@ -29,7 +29,7 @@
         <!-- Header Title -->
         <h1 class="text-3xl md:text-5xl font-extrabold sm:text-5xl text-[#255D3A] relative">
           {{ $banner->title }}
-          <sup class="absolute -top-4 right-0 border border-black rounded-full text-sm px-1 py-1 text-[#255D3A]">
+          <sup class="absolute -top-4 right-8 border border-black rounded-full text-sm px-1 py-1 text-[#255D3A]">
           TM
           </sup>
         </h1>
@@ -126,7 +126,7 @@
     <!-- Image Section -->
     <div class="lg:w-2/3 w-full">
       <img
-        src="{{asset('asset/dist/img/avatar3.png')}}"
+        src="{{asset('asset/img/istockphoto-1302041109-2048x2048.jpg')}}"
         alt="Litho Powerr"
         class="w-full max-w-sm mx-auto rounded-lg shadow-lg"
       />
@@ -159,7 +159,7 @@
     </div>
 
     <!-- Cards Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 md:px-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6 md:px-16">
       <!-- Card 1 -->
 
       @forelse ($products as $product)
