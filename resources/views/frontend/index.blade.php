@@ -118,39 +118,29 @@
     </div>
 </section>
 
-
-{{-- new mission and vision --}}
+{{-- NEW MISSION AND VISION --}}
 <div class="container mx-auto px-4 py-16">
   <h1 class="text-4xl font-extrabold text-center mb-12 text-[#255D3A] lg:text-5xl">
     Our Mission & Vision
   </h1>
-  <div class="flex flex-col lg:flex-row items-center gap-2 lg:gap-2">
+  <div class="flex flex-col lg:flex-row items-center gap-6">
     <!-- Image Section -->
     <div class="w-full lg:w-1/2 flex justify-center">
       <img
-        src="{{asset('asset/img/vision.jpg')}}"
-        alt="Litho Powerr"
-        class="w-[400px] h-[300px] rounded-lg shadow-lg"
+        src="{{ asset('asset/img/vision.jpg') }}"
+        alt="Litho Powerr Vision"
+        class="w-[400px] h-[300px] object-cover rounded-lg shadow-lg"
       />
     </div>
     <!-- Text Section -->
-    <div class="w-full lg:w-1/2">
-      <p class="text-gray-700 leading-relaxed text-justify px-4 lg:px-0">
-        At Litho Powerr, we take great pride in our state-of-the-art
-        manufacturing processes, which combine the latest in battery technology
-        with rigorous quality control measures. Every product undergoes
-        comprehensive testing to meet global standards for performance and
-        safety. Our commitment to sustainability, combined with a strong
-        emphasis on innovation, allows us to provide eco-friendly power
-        solutions that not only meet today’s needs but are also designed for
-        the future. Whether you're seeking a reliable inverter battery, a
-        cutting-edge electric vehicle battery, or a high-performance e-rickshaw
-        power system, Litho Powerr is your trusted partner in powering a
-        cleaner, more efficient future.
+    <div class="w-full lg:w-1/2 px-4 lg:px-0">
+      <p class="text-gray-700 leading-relaxed text-justify P-2">
+        At Litho Powerr, we take great pride in our state-of-the-art manufacturing processes, which combine the latest in battery technology with rigorous quality control measures. Every product undergoes comprehensive testing to meet global standards for performance and safety. Our commitment to sustainability, combined with a strong emphasis on innovation, allows us to provide eco-friendly power solutions that not only meet today’s needs but are also designed for the future. Whether you're seeking a reliable inverter battery, a cutting-edge electric vehicle battery, or a high-performance e-rickshaw power system, Litho Powerr is your trusted partner in powering a cleaner, more efficient future.
       </p>
     </div>
   </div>
 </div>
+
 
 
 
