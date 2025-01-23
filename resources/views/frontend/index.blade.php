@@ -29,7 +29,7 @@
         <!-- Header Title -->
         <h1 class="text-3xl md:text-5xl font-extrabold sm:text-5xl text-[#255D3A] relative">
           {{ $banner->title }}
-          <sup class="absolute -top-4 right-8 border border-black rounded-full text-sm px-1 py-1 text-[#255D3A]">
+          <sup class="absolute -top-4 md:right-18 border border-black rounded-full text-sm px-1 py-1 text-[#255D3A]">
           TM
           </sup>
         </h1>
@@ -121,19 +121,21 @@
 
 {{-- new mission and vision --}}
 <div class="container mx-auto px-4 py-16">
-  <h1 class="text-4xl font-extrabold text-center mb-6 text-[#255D3A]">Our Mission & Vision</h1>
-  <div class="flex flex-col lg:flex-row items-center gap-6">
+  <h1 class="text-4xl font-extrabold text-center mb-12 text-[#255D3A] lg:text-5xl">
+    Our Mission & Vision
+  </h1>
+  <div class="flex flex-col lg:flex-row items-center gap-2 lg:gap-2">
     <!-- Image Section -->
-    <div class="lg:w-2/3 w-full">
+    <div class="w-full lg:w-1/2 flex justify-center">
       <img
-        src="{{asset('asset/img/istockphoto-1302041109-2048x2048.jpg')}}"
+        src="{{asset('asset/img/vision.jpg')}}"
         alt="Litho Powerr"
-        class="w-full max-w-sm mx-auto rounded-lg shadow-lg"
+        class="w-[400px] h-[300px] rounded-lg shadow-lg"
       />
     </div>
     <!-- Text Section -->
-    <div class="lg:w-2/3 w-full">
-      <p class="text-gray-700 leading-relaxed text-justify px-8">
+    <div class="w-full lg:w-1/2">
+      <p class="text-gray-700 leading-relaxed text-justify px-4 lg:px-0">
         At Litho Powerr, we take great pride in our state-of-the-art
         manufacturing processes, which combine the latest in battery technology
         with rigorous quality control measures. Every product undergoes
@@ -143,12 +145,13 @@
         solutions that not only meet today’s needs but are also designed for
         the future. Whether you're seeking a reliable inverter battery, a
         cutting-edge electric vehicle battery, or a high-performance e-rickshaw
-        power system, Litho Power is your trusted partner in powering a
+        power system, Litho Powerr is your trusted partner in powering a
         cleaner, more efficient future.
       </p>
     </div>
   </div>
 </div>
+
 
 
    {{-- Explore Products --}}
@@ -329,7 +332,7 @@
     </div>
 
     @endforeach
-  </section> --}} --}}
+  </section> --}} 
 
   <section id="contact" class="bg-white py-16 ">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 text-white">
