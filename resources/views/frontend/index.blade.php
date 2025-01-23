@@ -201,7 +201,7 @@
             <article
                 class="bg-white grid grid-cols-1 md:grid-cols-2 gap-2 rounded-lg overflow-hidden ">
                 <img src="{{ asset('storage/' . $images[0]) }}" alt="{{ $product->title }}"
-                    class="w-full h-48 object-cover" />
+                    class="w-full h-full object-cover" />
                 <div class="p-6">
                     <h1 class="text-xl font-bold text-[#255D3A]">{{ $product->title }}</h1>
                     <p class="text-[#012D14] mt-2">
