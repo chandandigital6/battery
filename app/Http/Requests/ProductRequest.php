@@ -29,7 +29,7 @@ class ProductRequest extends FormRequest
             'long_description' => 'nullable|string',
             'qty' => 'nullable|integer|min:0',
             'price' => 'nullable|numeric|min:0',
-            'category_name' => 'nullable|string|max:255',
+            'category_name' => 'nullable|in:battery,electric scooter',
             'f_1' => 'nullable|string|max:255',
             'f_2' => 'nullable|string|max:255',
             'f_3' => 'nullable|string|max:255',

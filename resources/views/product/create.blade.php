@@ -69,7 +69,11 @@
 
     <div class="mb-3">
         <label for="category_name" class="form-label">Category Name</label>
-        <input type="text" class="form-control @error('category_name') is-invalid @enderror" id="category_name" name="category_name" value="{{ old('category_name', $product->category_name ?? '') }}">
+        <select class="form-control @error('category_name') is-invalid @enderror" id="category_name" name="category_name">
+            <option value="">Select Category</option>
+            <option value="battery" {{ old('category_name', $product->category_name ?? '') == 'battery' ? 'selected' : '' }}>Battery</option>
+            <option value="electric scooter" {{ old('category_name', $product->category_name ?? '') == 'electric scooter' ? 'selected' : '' }}>Electric Scooter</option>
+        </select>
         @error('category_name')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror

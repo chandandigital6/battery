@@ -62,10 +62,12 @@
             <h3 class="text-lg font-semibold mb-2">Product Details:</h3>
             <p class="text-gray-700">{!! $product->long_description !!}</p>
 
-            <img src="{{ asset('storage/' . $product->image) }}"
-            alt="Product"
-            class="w-full h-auto rounded-lg shadow-md mb-4"
-            id="mainImage">
+           @if ($product->image)
+           <img src="{{ asset('storage/' . $product->image) }}"
+           alt="Product"
+           class="w-full h-auto rounded-lg shadow-md mb-4"
+           id="mainImage">
+           @endif
         </div>
 
           <!-- Long Description -->

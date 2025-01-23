@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('long_description')->nullable();
             $table->string('qty')->nullable();
             $table->string('price')->nullable();
-            $table->string('category_name')->nullable();
+            $table->enum('category_name',['battery','electric scooter'])->nullable();
             $table->string('f_1')->nullable();
             $table->string('f_2')->nullable();
             $table->string('f_3')->nullable();
