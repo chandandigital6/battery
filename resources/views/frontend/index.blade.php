@@ -107,14 +107,14 @@
                 </p>
             </div> --}}
         </div>
-        @foreach ($abouts->skip(4)->take(1) as $about)
+        {{-- @foreach ($abouts->skip(4)->take(1) as $about) --}}
         {{-- <h2 class="text-4xl font-extrabold text-green-900 sm:text-5xl">
             {{ $about->title }}
         </h2> --}}
-        <span class="mt-8 text-lg text-black max-w-3xl mx-auto " style="">
+        {{-- <span class="mt-8 text-lg text-black max-w-3xl mx-auto " style="">
             {!! $about->description !!}
-        </span>
-    @endforeach
+        </span> --}}
+    {{-- @endforeach --}}
     </div>
 </section>
 
