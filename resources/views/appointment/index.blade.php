@@ -69,7 +69,7 @@
 {{--                                            <a href="{{ route('banner.edit', $appointment->id) }}" class="btn btn-primary">Edit</a>--}}
                                             <a href="{{ route('appointment.delete', $appointment->id) }}" class="btn btn-danger">Delete</a>
                                             <!-- Add delete button if needed -->
-                                            <a href="{{ route('appointment.duplicate', $appointment->id) }}" class="btn btn-warning">Duplicate</a>
+                                            {{-- <a href="{{ route('appointment.duplicate', $appointment->id) }}" class="btn btn-warning">Duplicate</a> --}}
 
                                         </td>
                                     </tr>
