@@ -66,7 +66,7 @@
         <h2 class="text-4xl font-extrabold text-[#255D3A] sm:text-5xl">
          {{ $about->title }}
         </h2>
-        <p class="mt-4 text-lg text-black max-w-3xl mx-auto">
+        <p class="mt-4 text-lg text-black max-w-7xl mx-auto">
 {!! $about->description !!}
         </p>
         @endforeach
