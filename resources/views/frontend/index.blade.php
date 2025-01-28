@@ -392,10 +392,11 @@
                     <p class="text-lg text-black mb-6">You can also reach us at the following address:</p>
                     <div class="text-lg text-black">
                         <p><strong>Factory:</strong> B15 Rania, Kanpur Dehat, Uttar Pradesh – 209304</p>
+                        
                         <p class="mt-2"><strong>Phone:</strong> 8090354027</p>
                         <p class="mt-2"><strong>Email:</strong> lithopower25@gmail.com</p>
                         <p class="mt-2"><strong>Website:</strong> www.lithopowerr.com</p>
-                        <p class="mt-2"><strong>Visit:</strong> www.eprrecycler.com</p>
+                        
                     </div>
                 </div>
             </div>
