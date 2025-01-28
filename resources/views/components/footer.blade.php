@@ -12,7 +12,7 @@
             We are providing latest batteries for the e-vehicles like 2 wheeler, 3 wheeler etc
           </p>
           <div class="flex mt-8 space-x-6 text-white">
-            <a class="hover:opacity-75" href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+            <a class="hover:opacity-75" href="https://www.linkedin.com/in/litho-power-649ab833b/" target="_blank" rel="noreferrer">
               <span class="sr-only"> LinkedIn </span>
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.569c0-1.33-.026-3.043-1.855-3.043-1.857 0-2.141 1.449-2.141 2.945v5.667h-3v-10h2.878v1.367h.041c.4-.758 1.379-1.555 2.837-1.555 3.031 0 3.593 1.995 3.593 4.59v5.598z"/>
@@ -65,7 +65,7 @@
               <a class="hover:opacity-75" href ="#product">E-Vehicles </a>
               <a class="hover:opacity-75" href ="#product">2 Wheeler Battery </a>
               <a class="hover:opacity-75" href =#product>3 Wheeler Battery</a>
-             
+              <a class="hover:opacity-75" href =#product>Customised Battery</a>
             </nav>
           </div>
           <div>

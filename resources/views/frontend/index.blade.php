@@ -388,7 +388,7 @@
                 <!-- Contact Information Section -->
                 <div
                     class="flex flex-col justify-center bg-[#255D3A]  bg-opacity-20 backdrop-blur-lg rounded-lg shadow-lg p-8">
-                    <h3 class="text-3xl font-semibold text-[#255D3A] mb-4"><strong>Our Office</strong></h3>
+                    <h3 class="text-3xl font-semibold text-[#255D3A] mb-4"><strong>Recycler</strong></h3>
                     <p class="text-lg text-black mb-6">You can also reach us at the following address:</p>
                     <div class="text-lg text-black">
                         <p><strong>Factory:</strong> B15 Rania, Kanpur Dehat, Uttar Pradesh – 209304</p>
