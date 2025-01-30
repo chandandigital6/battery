@@ -8,10 +8,10 @@
                 <img src="{{asset('asset/img/LITHO_POWER.png')}}" alt="" class="w-20 h-20">
             </a>
         {{-- <img src="#" class="mr-5 h-6 sm:h-9" alt="logo" /> --}}
-          <p class="max-w-xs mt-4 text-sm text-white">
+          <p class="max-w-xs mt-2 text-sm text-white">
             We are providing latest batteries for the e-vehicles like 2 wheeler, 3 wheeler etc
           </p>
-          <div class="flex mt-8 space-x-6 text-white">
+          <div class="flex mt-2 space-x-6 text-white">
             <a class="hover:opacity-75" href="https://www.linkedin.com/in/litho-power-649ab833b/" target="_blank" rel="noreferrer">
               <span class="sr-only"> LinkedIn </span>
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -91,8 +91,9 @@
           </div>
         </div>
       </div>
-      <p class="mt-8 text-xs text-white">
-        © 2025 Real Victory Groups
+      <p class="mt-2 text-xs text-white">
+        © 2025 Litho Powerr
       </p>
+      <p class="text-xs text-white">Designed By Real Victory Groups</p>
     </div>
   </footer>
